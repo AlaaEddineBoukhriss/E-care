@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+            <link href="{{ asset( 'css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all">
+            <!-- Custom Theme files -->
+            <link href="{{ asset( 'css/chat.css')}}" rel="stylesheet" type="text/css" media="all"/>
+            <!--icons-css-->
+            <link href="{{ asset( 'css/font-awesome.css')}}" rel="stylesheet">
+
+
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+            <script src="{{ asset( 'js/jquery-2.1.1.min.js')}}"></script>
+            <script src="{{ asset( 'js/bootstrap.js')}}"></script>
+        {% endblock %}
+    </head>
+    <body>
+
+{#        {% block header %}{% endblock %}#}
+{#        {% block sidebar %}{% endblock %}#}
+        {% block body %}{% endblock %}
+{#        {% block footer %}{% endblock %}#}
+
+        <!------ Include the above in your HEAD tag ---------->
+
+
+    </body>
+</html>
