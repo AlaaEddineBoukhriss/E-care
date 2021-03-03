@@ -1,0 +1,11 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}New RepresentantClinique{% endblock %}
+
+{% block body %}
+    <h1>Create new RepresentantClinique</h1>
+
+    {{ include('representant_clinique/_form.html.twig') }}
+
+    <a href="{{ path('representant_clinique_index') }}">back to list</a>
+{% endblock %}

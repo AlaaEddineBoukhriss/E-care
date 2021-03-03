@@ -1,0 +1,34 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}RepresentantPara{% endblock %}
+
+{% block body %}
+    <h1>RepresentantPara</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ representant_para.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ representant_para.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ representant_para.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Cin</th>
+                <td>{{ representant_para.cin }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('representant_para_index') }}">back to list</a>
+
+    <a href="{{ path('representant_para_edit', {'id': representant_para.id}) }}">edit</a>
+
+    {{ include('representant_para/_delete_form.html.twig') }}
+{% endblock %}

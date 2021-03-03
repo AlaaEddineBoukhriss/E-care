@@ -1,0 +1,13 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Edit RepresentantPara{% endblock %}
+
+{% block body %}
+    <h1>Edit RepresentantPara</h1>
+
+    {{ include('representant_para/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('representant_para_index') }}">back to list</a>
+
+    {{ include('representant_para/_delete_form.html.twig') }}
+{% endblock %}

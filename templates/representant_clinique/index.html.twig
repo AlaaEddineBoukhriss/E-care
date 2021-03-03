@@ -1,0 +1,39 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}RepresentantClinique {% endblock %}
+
+{% block body %}
+    <h1>Representant Clinique </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Cin</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for representant_clinique in representant_cliniques %}
+            <tr>
+                <td>{{ representant_clinique.id }}</td>
+                <td>{{ representant_clinique.nom }}</td>
+                <td>{{ representant_clinique.prenom }}</td>
+                <td>{{ representant_clinique.cin }}</td>
+                <td>
+                    <a href="{{ path('representant_clinique_show', {'id': representant_clinique.id}) }}">show</a>
+                    <a href="{{ path('representant_clinique_edit', {'id': representant_clinique.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('representant_clinique_new') }}">Create new</a>
+{% endblock %}

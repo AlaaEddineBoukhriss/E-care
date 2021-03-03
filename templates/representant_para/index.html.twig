@@ -1,0 +1,39 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Representant Para {% endblock %}
+
+{% block body %}
+    <h1>Representant Para-pharmacie </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Cin</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for representant_para in representant_paras %}
+            <tr>
+                <td>{{ representant_para.id }}</td>
+                <td>{{ representant_para.nom }}</td>
+                <td>{{ representant_para.prenom }}</td>
+                <td>{{ representant_para.cin }}</td>
+                <td>
+                    <a href="{{ path('representant_para_show', {'id': representant_para.id}) }}">show</a>
+                    <a href="{{ path('representant_para_edit', {'id': representant_para.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('representant_para_new') }}">Create new</a>
+{% endblock %}
