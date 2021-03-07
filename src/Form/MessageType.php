@@ -14,6 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\Date;
+use function Sodium\add;
 
 class MessageType extends AbstractType
 {
@@ -23,7 +24,7 @@ class MessageType extends AbstractType
             ->add('sender', IntegerType::class)
             ->add('receiver', IntegerType::class)
             ->add('message', TextType::class);
-
+        
     }
 
     public function configureOptions(OptionsResolver $resolver)

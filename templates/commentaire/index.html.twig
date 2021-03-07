@@ -1,0 +1,48 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container contact-form">
+
+    <form method="post">
+        {% block body %}
+            <h1>Questions médicales</h1>
+
+            <table class="table" border="1" >
+                <thead>
+                <tr>
+                    <th>Patient </th>
+                    <th>Sujet</th>
+                    <th>Question</th>
+                    <th>Medecin </th>
+                    <th>Reponse </th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for comme in commentaires %}
+                    <tr>
+                        <td>{{ comme.pseudo }}</td>
+                        <td>{{ comme.sujet }}</td>
+                        <td>{{ comme.question }}</td>
+                        <td>{{ comme.medecin }}</td>
+                        <td>{{ comme.rep }}</td>
+                        <td>
+                            <a href="{{ path('commentaire_show' , {'id': comme.id} ) }}">Show</a>
+                            <a href="{{ path('commentaire_edit', {'id': comme.id}) }}">Reply</a>
+                            <a href="{{ path('commentaire_edit', {'id': comme.id}) }}">Edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="6">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <a href="{{ path('commentaire_new') }}">Posez votre question!</a>
+            </tr>
+        {% endblock %}
+    </form>
+</div>

@@ -3,97 +3,40 @@
 {% block title %}Message index{% endblock %}
 
 {% block body %}
-    {# <h1>Message index</h1> #}
+    <h1>Message index</h1>
 
-    {# <table class="table"> #}
-    {# <thead> #}
-    {# <tr> #}
-    {# <th>Id</th> #}
-    {# <th>Sender</th> #}
-    {# <th>Receiver</th> #}
-    {# <th>Message</th> #}
-    {# <th>Time</th> #}
-    {# <th>actions</th> #}
-    {# </tr> #}
-    {# </thead> #}
-    {# <tbody> #}
-    {# {% for message in messages %} #}
-    {# <tr> #}
-    {# <td>{{ message.id }}</td> #}
-    {# <td>{{ message.sender }}</td> #}
-    {# <td>{{ message.receiver }}</td> #}
-    {# <td>{{ message.message }}</td> #}
-    {# <td>{{ message.time ? message.time|date('Y-m-d') : '' }}</td> #}
-    {# <td> #}
-    {# <a href="{{ path('message_show', {'id': message.id}) }}">show</a> #}
-    {# <a href="{{ path('message_edit', {'id': message.id}) }}">edit</a> #}
-    {# </td> #}
-    {# </tr> #}
-    {# {% else %} #}
-    {# <tr> #}
-    {# <td colspan="6">no records found</td> #}
-    {# </tr> #}
-    {# {% endfor %} #}
-    {# </tbody> #}
-    {# </table> #}
+     <table class="table">
+     <thead>
+     <tr>
+     <th>Id</th>
+     <th>Sender</th>
+     <th>Receiver</th>
+     <th>Message</th>
+     <th>Time</th>
+     <th>actions</th>
+     </tr>
+     </thead>
+     <tbody>
+     {% for message in messages %}
+     <tr>
+     <td>{{ message.id }}</td>
+     <td>{{ message.sender }}</td>
+     <td>{{ message.receiver }}</td>
+     <td>{{ message.message }}</td>
+     <td>{{ message.time ? message.time|date('Y-m-d') : '' }}</td>
+     <td>
+     <a href="{{ path('message_show', {'id': message.id}) }}">show</a>
+     <a href="{{ path('message_edit', {'id': message.id}) }}">edit</a>
+     </td>
+     </tr>
+     {% else %}
+     <tr>
+     <td colspan="6">no records found</td>
+     </tr>
+     {% endfor %}
+     </tbody>
+     </table>
 
-    {# <a href="{{ path('message_new') }}">Create new</a> #}
-    <div class="chat_window">
-        <div class="top_menu">
-            <div class="buttons">
-                <div class="button close"></div>
-                <div class="button minimize"></div>
-                <div class="button maximize"></div>
-            </div>
-            <div class="title">Chat</div>
-        </div>
-        <ul class="messages">
-            {% for message in messages %}
-                {% if message.sender == 2 %}
-            <li class="message left appeared">
-
-                    <div class="avatar"></div>
-                    <div class="text_wrapper">
-                        <div class="text">
-                            {{ message.message }}
-                        </div>
-                    </div>
-            </li>
-                    {% else %}
-                        <li class="message right appeared">
-
-                            <div class="avatar"></div>
-                            <div class="text_wrapper">
-                                <div class="text">
-                                    {{ message.message }}
-                                </div>
-                            </div>
-                        </li>
-            {% endif %}
-                 <a href="{{ path('message_show', {'id': message.id}) }}">show</a>
-                 <a href="{{ path('message_edit', {'id': message.id}) }}">edit</a>
-
-            {% endfor %}
-        </ul>
-
-        <div class="bottom_wrapper clearfix">
-            <div class="message_input_wrapper">
-                <input id="my-message" class="message_input" name="my-message" placeholder="Type your message here..."/></div>
-            <div class="send_message">
-                <div class="icon"></div>
-                <div class="text"><a href="{{ path('message_add', {'msg': 'ok'}) }}">Send</a></div>
-            </div>
-        </div>
-    </div>
-    <div class="message_template">
-
-
-        <li class="message">
-            <div class="avatar"></div>
-            <div class="text_wrapper">
-                <div class="text">
-                </div>
-            </div>
-        </li>
-    </div>
+     <a href="{{ path('message_new') }}">Create new</a>
+</tr>
 {% endblock %}
