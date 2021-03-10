@@ -18,7 +18,7 @@ class Medecin
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255 )
      */
     private $nom;
 
@@ -46,6 +46,17 @@ class Medecin
      * @ORM\Column(type="string", length=255)
      */
     private $Num_tel;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Cin;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $mdp;
+
 
     public function getId(): ?int
     {
@@ -123,4 +134,33 @@ class Medecin
 
         return $this;
     }
+
+    public function getCin(): ?string
+    {
+        return $this->Cin;
+    }
+
+    public function setCin(string $Cin): self
+    {
+        $this->Cin = $Cin;
+
+        return $this;
+    }
+
+    public function getMdp(): ?string
+    {
+        return $this->mdp;
+    }
+
+    public function setMdp(string $mdp): self
+    {
+        $this->mdp = $mdp;
+
+        return $this;
+    }
+
+
+
 }
+
+

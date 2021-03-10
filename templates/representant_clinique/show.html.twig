@@ -1,34 +1,53 @@
-{% extends 'base2.html.twig' %}
+<title>{% block title %} Rep.Clinique {% endblock %} </title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-{% block title %}RepresentantClinique{% endblock %}
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+    </div>
+    <form method="post">
 
-{% block body %}
-    <h1>RepresentantClinique</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ representant_clinique.id }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>{{ representant_clinique.nom }}</td>
-            </tr>
-            <tr>
-                <th>Prenom</th>
-                <td>{{ representant_clinique.prenom }}</td>
-            </tr>
-            <tr>
-                <th>Cin</th>
-                <td>{{ representant_clinique.cin }}</td>
-            </tr>
-        </tbody>
-    </table>
+        {% block title %}RepresentantClinique{% endblock %}
 
-    <a href="{{ path('representant_clinique_index') }}">back to list</a>
+        {% block body %}
+            <h1>RepresentantClinique</h1>
 
-    <a href="{{ path('representant_clinique_edit', {'id': representant_clinique.id}) }}">edit</a>
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ representant_clinique.id }}</td>
+                </tr>
+                <tr>
+                    <th>Nom</th>
+                    <td>{{ representant_clinique.nom }}</td>
+                </tr>
+                <tr>
+                    <th>Prenom</th>
+                    <td>{{ representant_clinique.prenom }}</td>
+                </tr>
+                <tr>
+                    <th>Cin</th>
+                    <td>{{ representant_clinique.cin }}</td>
+                </tr>
+                <tr>
+                    <th>Mdp</th>
+                    <td>{{ representant_clinique.mdp }}</td>
+                </tr>
+                </tbody>
+            </table>
 
-    {{ include('representant_clinique/_delete_form.html.twig') }}
-{% endblock %}
+            <a href="{{ path('representant_clinique_index') }}">back to list</a>
+
+            <a href="{{ path('representant_clinique_edit', {'id': representant_clinique.id}) }}">edit</a>
+
+            {{ include('representant_clinique/_delete_form.html.twig') }}
+        {% endblock %}
+
+    </form>
+</div>
+

@@ -1,13 +1,29 @@
-{% extends 'base2.html.twig' %}
+<title>{% block title %} Edit {% endblock %} </title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-{% block title %}Edit RepresentantClinique{% endblock %}
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+    </div>
+    <form method="post">
 
-{% block body %}
-    <h1>Edit RepresentantClinique</h1>
 
-    {{ include('representant_clinique/_form.html.twig', {'button_label': 'Update'}) }}
+        {% block body %}
+            <h1>Edit Representant Clinique</h1>
 
-    <a href="{{ path('representant_clinique_index') }}">back to list</a>
+            {{ include('representant_clinique/_form.html.twig', {'button_label': 'Update'}) }}
 
-    {{ include('representant_clinique/_delete_form.html.twig') }}
-{% endblock %}
+            <a href="{{ path('representant_clinique_index') }}">back to list</a>
+
+            {{ include('representant_clinique/_delete_form.html.twig') }}
+        {% endblock %}
+
+
+
+    </form>
+</div>
+
+

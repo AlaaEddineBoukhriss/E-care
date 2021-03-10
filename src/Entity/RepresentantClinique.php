@@ -32,6 +32,11 @@ class RepresentantClinique
      */
     private $cin;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $mdp;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class RepresentantClinique
     public function setCin(string $cin): self
     {
         $this->cin = $cin;
+
+        return $this;
+    }
+
+    public function getMdp(): ?string
+    {
+        return $this->mdp;
+    }
+
+    public function setMdp(string $mdp): self
+    {
+        $this->mdp = $mdp;
 
         return $this;
     }

@@ -1,3 +1,6 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+indexFront:
+  path: /medecinfront
+  controller: App\Controller\MedecinController::indexFront

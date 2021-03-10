@@ -1,46 +1,66 @@
-{% extends 'base2.html.twig' %}
+<title>{% block title %} Details {% endblock %} </title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-{% block title %}Medecin{% endblock %}
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+    </div>
+    <form method="post">
 
-{% block body %}
-    <h1>Medecin</h1>
+        {% block body %}
+            <h1>Medecin</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ medecin.id }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>{{ medecin.nom }}</td>
-            </tr>
-            <tr>
-                <th>Prenom</th>
-                <td>{{ medecin.prenom }}</td>
-            </tr>
-            <tr>
-                <th>Specialite</th>
-                <td>{{ medecin.specialite }}</td>
-            </tr>
-            <tr>
-                <th>Adresse</th>
-                <td>{{ medecin.adresse }}</td>
-            </tr>
-            <tr>
-                <th>Sexe</th>
-                <td>{{ medecin.sexe }}</td>
-            </tr>
-            <tr>
-                <th>Num_tel</th>
-                <td>{{ medecin.NumTel }}</td>
-            </tr>
-        </tbody>
-    </table>
+            <table class="table" border="1">
+                <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ medecin.id }}</td>
+                </tr>
+                <tr>
+                    <th>Nom</th>
+                    <td>{{ medecin.nom }}</td>
+                </tr>
+                <tr>
+                    <th>Prenom</th>
+                    <td>{{ medecin.prenom }}</td>
+                </tr>
+                <tr>
+                    <th>Specialite</th>
+                    <td>{{ medecin.specialite }}</td>
+                </tr>
+                <tr>
+                    <th>Adresse</th>
+                    <td>{{ medecin.adresse }}</td>
+                </tr>
+                <tr>
+                    <th>Sexe</th>
+                    <td>{{ medecin.sexe }}</td>
+                </tr>
+                <tr>
+                    <th>Num_tel</th>
+                    <td>{{ medecin.NumTel }}</td>
+                </tr>
+                <tr>
+                    <th>Cin</th>
+                    <td>{{ medecin.cin }}</td>
+                </tr>
+                <tr>
+                    <th>MDP</th>
+                    <td>{{ medecin.mdp }}</td>
+                </tr>
 
-    <a href="{{ path('medecin_index') }}">back to list</a>
+                </tbody>
+            </table>
 
-    <a href="{{ path('medecin_edit', {'id': medecin.id}) }}">edit</a>
+            <a href="{{ path('medecin_index') }}">back to list</a>
 
-    {{ include('medecin/_delete_form.html.twig') }}
-{% endblock %}
+            <a href="{{ path('medecin_edit', {'id': medecin.id}) }}">edit</a>
+
+            {{ include('medecin/_delete_form.html.twig') }}
+        {% endblock %}
+    </form>
+</div>
+

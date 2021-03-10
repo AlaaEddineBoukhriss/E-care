@@ -1,43 +1,99 @@
-{% extends 'base2.html.twig' %}
+<title>{% block title %} Medecin {% endblock %} </title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-{% block body2 %}
-    <h1>Medecin index</h1>
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+    </div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Specialite</th>
-                <th>Adresse</th>
-                <th>Sexe</th>
-                <th>Num_tel</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for medecin in medecins %}
-            <tr>
-                <td>{{ medecin.id }}</td>
-                <td>{{ medecin.nom }}</td>
-                <td>{{ medecin.prenom }}</td>
-                <td>{{ medecin.specialite }}</td>
-                <td>{{ medecin.adresse }}</td>
-                <td>{{ medecin.sexe }}</td>
-                <td>{{ medecin.NumTel }}</td>
-                <td>
-                    <a href="{{ path('medecin_show', {'id': medecin.id}) }}">show</a>
-                    <a href="{{ path('medecin_edit', {'id': medecin.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="8">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <form method="post">
 
-    <a href="{{ path('medecin_new') }}">Create new</a>
-{% endblock %}
+        {% block body %}
+            <h1>Medecin </h1>
+
+            <input type="text" id="search" name="search" class="form-control" placeholder="Search">
+            <script src="{{ asset('js/jquery.min.js') }}"></script>
+            <table id="tableac" class="table" border="1">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>CIN</th>
+                    <th>Specialite</th>
+                    <th>Adresse</th>
+                    <th>Sexe</th>
+                    <th>Num_tel</th>
+                    <th>MDP</th>
+                    <th>Actions</th>
+
+
+
+                </tr>
+                </thead>
+                <tbody>
+                {% for medecin in medecins %}
+
+                    <tr>
+                        <td>{{ medecin.id }}</td>
+                        <td>{{ medecin.nom }}</td>
+                        <td>{{ medecin.prenom }}</td>
+                        <td>{{ medecin.cin }}</td>
+                        <td>{{ medecin.specialite }}</td>
+                        <td>{{ medecin.adresse }}</td>
+                        <td>{{ medecin.sexe }}</td>
+                        <td>{{ medecin.NumTel }}</td>
+                        <td> ******* </td>
+
+                        <td>
+                            <a href="{{ path('medecin_show', {'id': medecin.id}) }}">show</a> |
+                            <a href="{{ path('medecin_edit', {'id': medecin.id}) }}">edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="8">no records found</td>
+                    </tr>
+
+                {% endfor %}
+                <script>
+                    $(document).ready(function(){
+                        $('#search').keyup(function(){
+                            search_table($(this).val());
+                        });
+                        function search_table(value){
+                            $('#tableac tbody tr').each(function(){
+                                var found = 'false';
+                                $(this).each(function(){
+                                    if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                    {
+                                        found = 'true';
+                                    }
+                                });
+                                if(found == 'true')
+                                {
+                                    $(this).show();
+
+                                }
+                                else
+                                {
+                                    $(this).hide();
+
+                                }
+                            });
+                        }
+                    });
+                </script>
+                </tbody>
+            </table>
+
+
+            <a href="{{ path('medecin_new') }}">Create new</a>
+        {% endblock %}
+
+
+    </form>
+</div>

@@ -20,7 +20,20 @@ class MedecinController extends AbstractController
      */
     public function index(MedecinRepository $medecinRepository): Response
     {
+
+
+
         return $this->render('medecin/index.html.twig', [
+            'medecins' => $medecinRepository->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/medecinfront", name="medecin_indexfront", methods={"GET"})
+     */
+    public function indexFront(MedecinRepository $medecinRepository): Response
+    {
+        return $this->render('medecin/indexfront.html.twig', [
             'medecins' => $medecinRepository->findAll(),
         ]);
     }
@@ -91,4 +104,5 @@ class MedecinController extends AbstractController
 
         return $this->redirectToRoute('medecin_index');
     }
+
 }

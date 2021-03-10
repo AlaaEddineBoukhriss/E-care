@@ -1,48 +1,62 @@
-{% extends 'base2.html.twig' %}
+<title> Patient</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-{% block title %}Patient index{% endblock %}
-
-{% block body %}
-    <h1>Patient index</h1>
-
-    <table class="table" border="1">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Cin</th>
-                <th>Adresse</th>
-                <th>Num_tel</th>
-                <th>Mdp</th>
-                <th>Taille</th>
-                <th>Poids</th>
-                <th>Maladie_chro</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for patient in patients %}
-            <tr>
-                <td>{{ patient.id }}</td>
-                <td>{{ patient.nom }}</td>
-                <td>{{ patient.prenom }}</td>
-                <td>{{ patient.cin }}</td>
-                <td>{{ patient.adresse }}</td>
-                <td>{{ patient.numTel }}</td>
-                <td>{{ patient.mdp }}</td>
-                <td>{{ patient.taille }}</td>
-                <td>{{ patient.poids }}</td>
-                <td>{{ patient.maladieChro }}</td>
-                <td>{{ include('patient/_delete_form.html.twig') }}</td>
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+    </div>
+    <form method="post">
 
 
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="11">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-{% endblock %}
+        {% block body %}
+            <h1>Patient index</h1>
+
+            <table class="table" border="1">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Cin</th>
+                    <th>Adresse</th>
+                    <th>Num_tel</th>
+                    <th>Mdp</th>
+                    <th>Taille</th>
+                    <th>Poids</th>
+                    <th>Maladie_chro</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for patient in patients %}
+                    <tr>
+                        <td>{{ patient.id }}</td>
+                        <td>{{ patient.nom }}</td>
+                        <td>{{ patient.prenom }}</td>
+                        <td>{{ patient.cin }}</td>
+                        <td>{{ patient.adresse }}</td>
+                        <td>{{ patient.numTel }}</td>
+                        <td>********</td>
+                        <td>{{ patient.taille }}</td>
+                        <td>{{ patient.poids }}</td>
+                        <td>{{ patient.maladieChro }}</td>
+                        <td>{{ include('patient/_delete_form.html.twig') }}</td>
+
+
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="11">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endblock %}
+
+
+    </form>
+</div>
+

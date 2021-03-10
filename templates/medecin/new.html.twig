@@ -1,11 +1,23 @@
-{% extends 'base2.html.twig' %}
+<title>{% block title %} Add Med {% endblock %} </title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+    </div>
+    <form method="post">
+
+        {% block body %}
+            <h1>Create new Medecin</h1>
+
+            {{ include('medecin/_form.html.twig') }}
+
+            <a href="{{ path('medecin_index') }}">back to list</a>
+        {% endblock %}
+    </form>
+</div>
 
 
-
-{% block body %}
-    <h1>Create new Medecin</h1>
-
-    {{ include('medecin/_form.html.twig') }}
-
-    <a href="{{ path('medecin_index') }}">back to list</a>
-{% endblock %}

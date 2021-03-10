@@ -1,3 +1,5 @@
+{% if app.user %}
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 
@@ -12,24 +14,42 @@
           content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
     <title>{% block title %} Admin {% endblock %} </title>
+    {% block stylesheets %}
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
-    {% block css%}
         <!-- Custom CSS -->
         <link href="plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
         <link rel="stylesheet" href="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
         <!-- Custom CSS -->
         <link href="css/style.min.css" rel="stylesheet">
     {%endblock%}
+    {% block javascripts %}
+
+        <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap tether Core JavaScript -->
+        <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/app-style-switcher.js"></script>
+        <script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+        <!--Wave Effects -->
+        <script src="js/waves.js"></script>
+        <!--Menu sidebar -->
+        <script src="js/sidebarmenu.js"></script>
+        <!--Custom JavaScript -->
+        <script src="js/custom.js"></script>
+        <!--This page JavaScript -->
+        <!--chartis chart-->
+        <script src="plugins/bower_components/chartist/dist/chartist.min.js"></script>
+        <script src="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+        <script src="js/pages/dashboards/dashboard1.js"></script>
+{% endblock %}
 </head>
 
 <body>
 <!-- ============================================================== -->
 <!-- Preloader - style you can find in spinners.css -->
 <!-- ============================================================== -->
-{% block body2 %}
-{%endblock%}
+
 {% block body %}
 
     <div class="preloader">
@@ -56,7 +76,7 @@
                 <!-- ============================================================== -->
                 <!-- Logo -->
                 <!-- ============================================================== -->
-                <a class="navbar-brand" href="dashboard.html">
+                <a class="navbar-brand" href="/admin">
 
                     <!-- Logo text -->
                     <span class="logo-text">
@@ -98,23 +118,20 @@
                     <!-- User profile and search -->
                     <!-- ============================================================== -->
                     <li>
-                        <a class="profile-pic" href="profile.html">
-                            <img src="plugins/images/users/#" alt="user-img" width="36"
-                                 class="img-circle"><span class="text-white font-medium">Admin1</span></a>
+                        <a class="profile-pic" href="#">
+                                <span class="text-white font-medium">  {% if app.user %}
+                                    <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+                                {% endif %}
+</span></a>
                     </li>
-                    <!-- ============================================================== -->
-                    <!-- User profile and search -->
-                    <!-- ============================================================== -->
+
                 </ul>
             </div>
         </nav>
     </header>
-    <!-- ============================================================== -->
-    <!-- End Topbar header -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
+
     <aside class="left-sidebar" data-sidebarbg="skin6">
         <!-- Sidebar scroll-->
         <div class="scroll-sidebar">
@@ -122,6 +139,7 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <!-- User Profile-->
+
                     <li class="sidebar-item pt-2">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.html"
                            aria-expanded="false">
@@ -138,67 +156,42 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="medecin-table.html"
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="medecin"
                            aria-expanded="false">
                             <i class="fas fa-heartbeat" aria-hidden="true"></i>
-                            <span class="hide-menu">Medecin</span>
+                            <span class="hide-menu">Medecins</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="basic-table.html"
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/patient"
+                           aria-expanded="false">
+                            <i class="fas fa-users" aria-hidden="true"></i>
+                            <span class="hide-menu"> Patients</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="representant/para"
                            aria-expanded="false">
                             <i class="fas fa-notes-medical" aria-hidden="true"></i>
-                            <span class="hide-menu">Representant para-pharmacie</span>
+                            <span class="hide-menu">Representants para-pharmacie</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="clinique-table.html"
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="representant/clinique"
                            aria-expanded="false">
                             <i class="fas fa-hospital" aria-hidden="true"></i>
-                            <span class="hide-menu">Representant clinique</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pharmacie-table.html"
-                           aria-expanded="false">
-                            <i class="fas fa-medkit" aria-hidden="true"></i>
-                            <span class="hide-menu">Pharmacie</span>
-                        </a>
-                    </li>
-
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="blank.html"
-                           aria-expanded="false">
-                            <i class="fa fa-columns" aria-hidden="true"></i>
-                            <span class="hide-menu">Gestion Rdvs</span>
-                        </a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="messagerie.html"
-                           aria-expanded="false">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                            <span class="hide-menu"> Gestion Messages </span>
+                            <span class="hide-menu">Representants clinique</span>
                         </a>
                     </li>
 
                 </ul>
 
             </nav>
-            <!-- End Sidebar navigation -->
         </div>
-        <!-- End Sidebar scroll-->
     </aside>
-    <!-- ============================================================== -->
-    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Page wrapper  -->
-    <!-- ============================================================== -->
+
     <div class="page-wrapper">
-        <!-- ============================================================== -->
-        <!-- Bread crumb and right sidebar toggle -->
-        <!-- ============================================================== -->
+
         <div class="page-breadcrumb bg-white">
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -213,14 +206,7 @@
                     </div>
                 </div>
             </div>
-            <!-- /.col-lg-12 -->
         </div>
-        <!-- ============================================================== -->
-        <!-- End Bread crumb and right sidebar toggle -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Container fluid  -->
-        <!-- ============================================================== -->
         <div class="container-fluid">
             <!-- ============================================================== -->
             <!-- Three charts -->
@@ -228,39 +214,40 @@
             <div class="row justify-content-center">
                 <div class="col-lg-4 col-md-12">
                     <div class="white-box analytics-info">
-                        <h3 class="box-title">Total Visit</h3>
+                        <h3 class="box-title">Medecins</h3>
                         <ul class="list-inline two-part d-flex align-items-center mb-0">
                             <li>
                                 <div id="sparklinedash"><canvas width="67" height="30"
                                                                 style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
                                 </div>
                             </li>
-                            <li class="ms-auto"><span class="counter text-success">20</span></li>
+                            <li class="ms-auto"><span class="counter text-success">10</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="white-box analytics-info">
-                        <h3 class="box-title">Total Page Views</h3>
+                        <h3 class="box-title">Cliniques</h3>
                         <ul class="list-inline two-part d-flex align-items-center mb-0">
                             <li>
                                 <div id="sparklinedash2"><canvas width="67" height="30"
                                                                  style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
                                 </div>
                             </li>
+                            <li class="ms-auto"><span class="counter text-success">5</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <div class="white-box analytics-info">
-                        <h3 class="box-title">Unique Visitor</h3>
+                        <h3 class="box-title">Pharmacies</h3>
                         <ul class="list-inline two-part d-flex align-items-center mb-0">
                             <li>
                                 <div id="sparklinedash3"><canvas width="67" height="30"
                                                                  style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
                                 </div>
                             </li>
-                            <li class="ms-auto"><span class="counter text-info">15</span>
+                            <li class="ms-auto"><span class="counter text-info">8</span>
                             </li>
                         </ul>
                     </div>
@@ -278,159 +265,19 @@
                             <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">
 
 
+
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- ============================================================== -->
-                <!-- Recent Comments -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <!-- .col -->
-                    <div class="col-md-12 col-lg-8 col-sm-12">
-                        <div class="card white-box p-0">
-                            <div class="card-body">
-                                <h3 class="box-title mb-0">Recent Comments</h3>
-                            </div>
-                            <div class="comment-widgets">
-                                <!-- Comment Row -->
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row p-3">
-                                    <div class="p-2"><img src="plugins/images/users/genu.jpg" alt="user" width="50" class="rounded-circle"></div>
 
-                                </div>
-                                <!-- Comment Row -->
-                                <div class="d-flex flex-row comment-row p-3">
-                                    <div class="p-2"><img src="plugins/images/users/ritesh.jpg" alt="user" width="50" class="rounded-circle"></div>
-                                    <div class="comment-text ps-2 ps-md-3 w-100">
-                                        <h5 class="font-medium">Johnathan Doeting</h5>
-                                        <span class="mb-3 d-block">Lorem Ipsum is simply dummy text of the printing and type setting industry.It has survived not only five centuries. </span>
-                                        <div class="comment-footer d-md-flex align-items-center">
 
-                                            <span class="badge rounded bg-danger">Rejected</span>
 
-                                            <div class="text-muted fs-2 ms-auto mt-2 mt-md-0">April 14, 2021</div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 col-sm-12">
-                        <div class="card white-box p-0">
-                            <div class="card-heading">
-                                <h3 class="box-title mb-0">Chat Listing</h3>
-                            </div>
-                            <div class="card-body">
-                                <ul class="chatonline">
-                                    <li>
-                                        <div class="call-chat">
-                                            <button class="btn btn-success text-white btn-circle btn" type="button">
-                                                <i class="fas fa-phone"></i>
-                                            </button>
-                                            <button class="btn btn-info btn-circle btn" type="button">
-                                                <i class="far fa-comments text-white"></i>
-                                            </button>
-                                        </div>
-                                        <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                    src="plugins/images/users/varun.jpg" alt="user-img" class="img-circle">
-                                            <div class="ms-2">
-                                                <span class="text-dark">Varun Dhavan <small
-                                                            class="d-block text-success d-block">online</small></span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <div class="call-chat">
-                                            <button class="btn btn-success text-white btn-circle btn" type="button">
-                                                <i class="fas fa-phone"></i>
-                                            </button>
-                                            <button class="btn btn-info btn-circle btn" type="button">
-                                                <i class="far fa-comments text-white"></i>
-                                            </button>
-                                        </div>
-                                        <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                    src="plugins/images/users/genu.jpg" alt="user-img" class="img-circle">
-                                            <div class="ms-2">
-                                                <span class="text-dark">Genelia
-                                                    Deshmukh <small class="d-block text-warning">Away</small></span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <div class="call-chat">
-                                            <button class="btn btn-success text-white btn-circle btn" type="button">
-                                                <i class="fas fa-phone"></i>
-                                            </button>
-                                            <button class="btn btn-info btn-circle btn" type="button">
-                                                <i class="far fa-comments text-white"></i>
-                                            </button>
-                                        </div>
-                                        <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                    src="plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle">
-                                            <div class="ms-2">
-                                                <span class="text-dark">Ritesh
-                                                    Deshmukh <small class="d-block text-danger">Busy</small></span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <div class="call-chat">
-                                            <button class="btn btn-success text-white btn-circle btn" type="button">
-                                                <i class="fas fa-phone"></i>
-                                            </button>
-                                            <button class="btn btn-info btn-circle btn" type="button">
-                                                <i class="far fa-comments text-white"></i>
-                                            </button>
-                                        </div>
-                                        <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                    src="plugins/images/users/arijit.jpg" alt="user-img" class="img-circle">
-                                            <div class="ms-2">
-                                                <span class="text-dark">Arijit
-                                                    Sinh <small class="d-block text-muted">Offline</small></span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <div class="call-chat">
-                                            <button class="btn btn-success text-white btn-circle btn" type="button">
-                                                <i class="fas fa-phone"></i>
-                                            </button>
-                                            <button class="btn btn-info btn-circle btn" type="button">
-                                                <i class="far fa-comments text-white"></i>
-                                            </button>
-                                        </div>
-                                        <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                    src="plugins/images/users/govinda.jpg" alt="user-img"
-                                                    class="img-circle">
-                                            <div class="ms-2">
-                                                <span class="text-dark">Govinda
-                                                    Star <small class="d-block text-success">online</small></span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <div class="call-chat">
-                                            <button class="btn btn-success text-white btn-circle btn" type="button">
-                                                <i class="fas fa-phone"></i>
-                                            </button>
-                                            <button class="btn btn-info btn-circle btn" type="button">
-                                                <i class="far fa-comments text-white"></i>
-                                            </button>
-                                        </div>
-                                        <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                    src="plugins/images/users/hritik.jpg" alt="user-img" class="img-circle">
-                                            <div class="ms-2">
-                                                <span class="text-dark">John
-                                                    Abraham<small class="d-block text-success">online</small></span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                     <!-- /.col -->
                 </div>
             </div>
@@ -442,40 +289,13 @@
             <!-- ============================================================== -->
             <footer class="footer text-center"> 2021 © IT-Geek
 
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
+            </footer
+</div>
+
     </div>
-    {% endblock %}
-
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
-
-        <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap tether Core JavaScript -->
-        <script src="bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="js/app-style-switcher.js"></script>
-        <script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
-        <!--Wave Effects -->
-        <script src="js/waves.js"></script>
-        <!--Menu sidebar -->
-        <script src="js/sidebarmenu.js"></script>
-        <!--Custom JavaScript -->
-        <script src="js/custom.js"></script>
-        <!--This page JavaScript -->
-        <!--chartis chart-->
-        <script src="plugins/bower_components/chartist/dist/chartist.min.js"></script>
-        <script src="plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-        <script src="js/pages/dashboards/dashboard1.js"></script>
 </body>
 
+{% endblock %}
+{% else %} <h1>You must Login from here <h1> <a href="/login"> Login</a>
+{% endif %}
 </html>

@@ -1,39 +1,56 @@
-{% extends 'base2.html.twig' %}
+<title>Rep. Clinique</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-{% block title %}RepresentantClinique {% endblock %}
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+    </div>
+    <form method="post">
 
-{% block body %}
-    <h1>Representant Clinique </h1>
+        {% block title %}Representant Clinique {% endblock %}
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Cin</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for representant_clinique in representant_cliniques %}
-            <tr>
-                <td>{{ representant_clinique.id }}</td>
-                <td>{{ representant_clinique.nom }}</td>
-                <td>{{ representant_clinique.prenom }}</td>
-                <td>{{ representant_clinique.cin }}</td>
-                <td>
-                    <a href="{{ path('representant_clinique_show', {'id': representant_clinique.id}) }}">show</a>
-                    <a href="{{ path('representant_clinique_edit', {'id': representant_clinique.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+        {% block body %}
+            <h1>Representant Clinique </h1>
 
-    <a href="{{ path('representant_clinique_new') }}">Create new</a>
-{% endblock %}
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Cin</th>
+                    <th>Mdp</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for representant_clinique in representant_cliniques %}
+                    <tr>
+                        <td>{{ representant_clinique.id }}</td>
+                        <td>{{ representant_clinique.nom }}</td>
+                        <td>{{ representant_clinique.prenom }}</td>
+                        <td>{{ representant_clinique.cin }}</td>
+                        <td> *********** </td>
+                        <td>
+                            <a href="{{ path('representant_clinique_show', {'id': representant_clinique.id}) }}">show</a>
+                            <a href="{{ path('representant_clinique_edit', {'id': representant_clinique.id}) }}">edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="5">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <a href="{{ path('representant_clinique_new') }}">Create new</a>
+        {% endblock %}
+
+    </form>
+</div>
+
+

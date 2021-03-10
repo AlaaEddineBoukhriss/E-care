@@ -1,7 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:alaa" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f927a0c0-4272-4c9c-8115-3c373f3525b4" name="Default Changelist" comment="" />
+    <list default="true" id="f927a0c0-4272-4c9c-8115-3c373f3525b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MedecinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MedecinController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Medecin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Medecin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/RepresentantClinique.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/RepresentantClinique.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/RepresentantPara.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/RepresentantPara.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/MedecinType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/MedecinType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PatientType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PatientType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RepresentantCliniqueType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RepresentantCliniqueType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RepresentantParaType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RepresentantParaType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/MedecinRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/MedecinRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base2.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/medecin/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/medecin/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/medecin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/medecin/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/medecin/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/medecin/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/medecin/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/medecin/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/representant_clinique/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_clinique/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/representant_clinique/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_clinique/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/representant_clinique/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_clinique/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/representant_clinique/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_clinique/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/representant_para/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_para/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/representant_para/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_para/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/representant_para/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_para/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/representant_para/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_para/show.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +69,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -55,9 +110,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/expression-language" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
       <path value="$PROJECT_DIR$/vendor/symfony/form" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
       <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
@@ -72,7 +125,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
       <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-link" />
@@ -88,7 +140,6 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
       <path value="$PROJECT_DIR$/vendor/symfony/inflector" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
@@ -110,7 +161,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
       <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
-      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
       <path value="$PROJECT_DIR$/vendor/symfony/intl" />
       <path value="$PROJECT_DIR$/vendor/symfony/proxy-manager-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/serializer" />
@@ -121,6 +171,13 @@
       <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1pFlXdV1YdFMZVLTzpv0906nugp" />
@@ -143,15 +200,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\E-CARE\src\Controller" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\public" />
       <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\public\js" />
       <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\public\css" />
       <recent name="C:\wamp64\www\E-CARE\tests" />
       <recent name="C:\wamp64\www\E-CARE\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\templates\default" />
+      <recent name="C:\wamp64\www\E-CARE\src\Controller" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -169,26 +227,81 @@
       <updated>1614786759537</updated>
       <workItem from="1614786760616" duration="2364000" />
       <workItem from="1614794157893" duration="431000" />
-      <workItem from="1614794615761" duration="18464000" />
+      <workItem from="1614794615761" duration="30602000" />
+      <workItem from="1614951405754" duration="7373000" />
+      <workItem from="1615033627780" duration="2016000" />
+      <workItem from="1615119044502" duration="934000" />
+      <workItem from="1615208534843" duration="16002000" />
+      <workItem from="1615292345444" duration="2920000" />
+      <workItem from="1615298028454" duration="630000" />
+      <workItem from="1615313648435" duration="23000" />
+      <workItem from="1615314351875" duration="2846000" />
+      <workItem from="1615317230586" duration="15000" />
+      <workItem from="1615317439099" duration="11159000" />
+      <workItem from="1615367858136" duration="10114000" />
+      <workItem from="1615386783857" duration="18086000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="513" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615240026682">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="513" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1615240026682" />
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1615409092684">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1615409092684" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1614810984382">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614810984382" />
-    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1614806230166">
+    <state x="525" y="135" key="NewPhpClassDialog" timestamp="1615210670650">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1614806230166" />
+    <state x="525" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1615210670650" />
+    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1615387341797">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1615387341797" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614794010735" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1615238269891">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1615238269891" />
     <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1614802026214">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1614802026214" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1615240116296">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1615240116296" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/medecin/index.html.twig</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
