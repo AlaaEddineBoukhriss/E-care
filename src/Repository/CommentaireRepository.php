@@ -47,4 +47,26 @@ class CommentaireRepository extends ServiceEntityRepository
         ;
     }
     */
+    /**
+     * @return Commentaire[] Returns an array of Commentaire objects
+     */
+public function findCommentaireBySujet($sujet){
+    return $this->createQueryBuilder('s')
+        ->where('s.sujet LIKE :sujet')
+        ->setParameter('sujet', '%'.$sujet.'%')
+        ->getQuery()
+        ->getResult();
+}
+
+
+
+    public function searchCommentaire($sujet)
+    {
+        return $this->createQueryBuilder('s')
+            ->Where('s.sujet LIKE :sujet')
+            ->setParameter('sujet', '%'.$sujet.'%')
+            ->getQuery()
+            ->execute();
+    }
+
 }

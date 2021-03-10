@@ -4,24 +4,27 @@ namespace App\Controller;
 
 use App\Entity\Commentaire;
 use App\Form\CommentaireType;
+use App\Form\SearchCommentaireType;
 use App\Repository\CommentaireRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 /**
  * @Route("/commentaire")
  */
 class CommentaireController extends AbstractController
 {
     /**
-     * @Route("/", name="commentaire_index", methods={"GET"})
+     * @Route("/", name="commentaire_index", methods={"GET","POST"})
      */
-    public function index(CommentaireRepository $commentaireRepository): Response
+    public function index(Request $request,CommentaireRepository $commentaireRepository): Response
     {
+
         return $this->render('commentaire/index.html.twig', [
             'commentaires' => $commentaireRepository->findAll(),
+
         ]);
     }
 
@@ -83,7 +86,7 @@ class CommentaireController extends AbstractController
      */
     public function delete(Request $request, Commentaire $commentaire): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$commentaire->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $commentaire->getId(), $request->request->get('_token'))) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($commentaire);
             $entityManager->flush();
@@ -91,4 +94,18 @@ class CommentaireController extends AbstractController
 
         return $this->redirectToRoute('commentaire_index');
     }
+
+    /**
+     * @Route("/searchSujet ", name="searchSujet" , methods={"GET"})
+     */
+    public function searchSujet(Request $request,NormalizerInterface $Normalizer)
+    {
+        $repository = $this->getDoctrine()->getRepository(Commentaire::class);
+        $requestString = $request->get('searchValue');
+        $sujet = $repository->findCommentaireBySujet($requestString);
+        $jsonContent = $Normalizer->normalize($sujet, 'json',['groups'=>'sujet']);
+        $retour = json_encode();
+        return new Response($retour);
+    }
+
 }

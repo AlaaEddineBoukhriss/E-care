@@ -7,9 +7,23 @@
 
     <form method="post">
         {% block body %}
-            <h1>Questions médicales</h1>
 
-            <table class="table" border="1" >
+
+            <h1>Questions médicales</h1>
+            <br />
+            <br />
+            <br />
+
+
+        <input type="text" id="search" name="search" class="form-control" placeholder="Search">
+
+
+            <br />
+          {#<input type="text" id="search" class="form-control"
+                   placeholder="Search"> #}
+        <script src="{{ asset('js/jquery.min.js') }}"></script>
+        <table id="tableac" class="table table-striped table-advance table-hover">
+
                 <thead>
                 <tr>
                     <th>Patient </th>
@@ -29,20 +43,57 @@
                         <td>{{ comme.rep }}</td>
                         <td>
                             <a href="{{ path('commentaire_show' , {'id': comme.id} ) }}">Show</a>
+                            <br />
                             <a href="{{ path('commentaire_edit', {'id': comme.id}) }}">Reply</a>
+                            <br />
                             <a href="{{ path('commentaire_edit', {'id': comme.id}) }}">Edit</a>
+                            <br />
+                            <br />
+                            <a href="#">J'aime</a>
+                            <br />
+                            <br />
+                            <a href="#">Je n'aime pas</a>
                         </td>
                     </tr>
                 {% else %}
                     <tr>
-                        <td colspan="6">no records found</td>
+                        <td colspan="6">Aucun sujet</td>
                     </tr>
                 {% endfor %}
+                <script>
+                    $(document).ready(function(){
+                        $('#search').keyup(function(){
+                            search_table($(this).val());
+                        });
+                        function search_table(value){
+                            $('#tableac tbody tr').each(function(){
+                                var found = 'false';
+                                $(this).each(function(){
+                                    if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                    {
+                                        found = 'true';
+                                    }
+                                });
+                                if(found == 'true')
+                                {
+                                    $(this).show();
+
+                                }
+                                else
+                                {
+                                    $(this).hide();
+
+                                }
+                            });
+                        }
+                    });
+                </script>
                 </tbody>
             </table>
 
             <a href="{{ path('commentaire_new') }}">Posez votre question!</a>
-            </tr>
+
         {% endblock %}
     </form>
 </div>
+
