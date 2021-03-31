@@ -1,0 +1,88 @@
+
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Les Produits Disponibles</h1>
+    </div>
+</section>
+{{ form(form) }}
+    <input type="text" id="search" name="search" class="form-control" placeholder="Search by Marque">
+{% block body %}
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <table id="tableac" class="table table-striped table-advance table-hover">
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Quantite</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for produit in produits %}
+            <tr>
+                <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
+                <td>{{ produit.id }}</td>
+                <td>{{ produit.nom }}</td>
+                <td>{{ produit.prix }}</td>
+                <td>{{ produit.Quantite }}</td>
+                <td>
+
+                <td class="text-right"><button class="btn btn-sm btn-info"><a href="{{ path('produit_show',{'id':produit.id})}}"><i class="fa fa-share"></i> </button> </td>
+
+                <td class="text-right"><button class="btn btn-sm btn-info"><a href="{{ path('cart_add',{'id':produit.id}) }}"> <i class="fa bx-image-add"></i>add </a></button>
+
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        <script>
+            $(document).ready(function(){
+                $('#search').keyup(function(){
+                    search_table($(this).val());
+                });
+                function search_table(value){
+                    $('#tableac tbody tr').each(function(){
+                        var found = 'false';
+                        $(this).each(function(){
+                            if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                            {
+                                found = 'true';
+                            }
+                        });
+                        if(found == 'true')
+                        {
+                            $(this).show();
+
+                        }
+                        else
+                        {
+                            $(this).hide();
+
+                        }
+                    });
+                }
+            });
+        </script>
+        </tbody>
+
+    </table>
+
+    <a href="{{ path('produit_new') }}">Create new</a>
+    <a href="{{ path('carte') }}">voir panier</a>
+{% endblock %}
