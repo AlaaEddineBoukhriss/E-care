@@ -29,7 +29,7 @@ class PatientController extends AbstractController
      * @Route("/new", name="patient_new", methods={"GET","POST"})
      */
 
-    public function new(Request $request): Response
+    public function newFront(Request $request): Response
     {
         $patient = new Patient();
         $form = $this->createForm(PatientType::class, $patient);
@@ -40,7 +40,7 @@ class PatientController extends AbstractController
             $entityManager->persist($patient);
             $entityManager->flush();
 
-            return $this->redirectToRoute('patient_index');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('patient/new.html.twig', [

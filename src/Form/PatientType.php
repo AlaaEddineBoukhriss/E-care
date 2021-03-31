@@ -20,7 +20,7 @@ class PatientType extends AbstractType
             ->add('cin' , IntegerType::class)
             ->add('adresse' , TextType::class)
             ->add('num_tel' , IntegerType::class)
-            ->add('mdp', PasswordType::class)
+            ->add('password', PasswordType::class)
             ->add('taille', IntegerType::class)
             ->add('poids' , IntegerType::class)
             ->add('maladie_chro', IntegerType::class)

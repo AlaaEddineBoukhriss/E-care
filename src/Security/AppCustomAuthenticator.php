@@ -2,6 +2,7 @@
 
 namespace App\Security;
 
+use App\Entity\Medecin;
 use App\Entity\User;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -78,6 +79,9 @@ class AppCustomAuthenticator extends AbstractFormLoginAuthenticator implements P
         return $user;
     }
 
+
+
+
     public function checkCredentials($credentials, UserInterface $user)
     {
         //return $this->passwordEncoder->isPasswordValid($user, $credentials['password']);
@@ -98,8 +102,7 @@ class AppCustomAuthenticator extends AbstractFormLoginAuthenticator implements P
             return new RedirectResponse($targetPath);
         }
 
-      return new RedirectResponse($this->urlGenerator->generate('admin'));
-     //   return new RedirectResponse($this->urlGenerator->generate('/admin'));
+      return new RedirectResponse($this->urlGenerator->generate('home'));
 
     }
 

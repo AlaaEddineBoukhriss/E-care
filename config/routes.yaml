@@ -4,3 +4,10 @@
 indexFront:
   path: /medecinfront
   controller: App\Controller\MedecinController::indexFront
+
+newFront:
+  path: /signup
+  controller: App\Controller\PatientController::base
+
+captcha_routing:
+  resource: "@CaptchaBundle/Resources/config/routing.yml"

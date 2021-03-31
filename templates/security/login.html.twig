@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Login Form Template</title>
+    <title>Login</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -41,7 +41,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-8 col-sm-offset-2 text">
-                    <h1><strong></strong> Login Admin</h1>
                     <div class="description">
 
 
@@ -67,8 +66,27 @@
                                 {% if app.user %}
                                     <div class="mb-3">
                                         You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                                        Or Click Here <a href="{{ path('default') }}"> Home</a>
                                     </div>
-                                {% endif %}
+                               {#
+                                <label for="inputLogin">Login</label>
+                                <input type="text" value="{{ last_username }}" name="login" id="inputLogin" class="form-control" required autofocus>
+                                <label for="inputPassword">Password</label>
+                                <input type="password" name="password" id="inputPassword" class="form-control" required>
+
+                                <input type="hidden" name="_csrf_token"
+                                       value="{{ csrf_token('authenticate') }}"
+                                >
+                                <div class="checkbox mb-3">
+                                    <label>
+                                        <input type="checkbox" name="_remember_me"> Remember me
+                                    </label>
+                                </div>
+                                <button class="btn btn-lg btn-primary" type="submit">
+                                    Sign in
+                                </button> #}
+                                {% else %}
+                                    <h3><a href="{{ path('default') }}"> Home</a></h3>
                                 <label for="inputLogin">Login</label>
                                 <input type="text" value="{{ last_username }}" name="login" id="inputLogin" class="form-control" required autofocus>
                                 <label for="inputPassword">Password</label>
@@ -85,6 +103,7 @@
                                 <button class="btn btn-lg btn-primary" type="submit">
                                     Sign in
                                 </button>
+                                {% endif %}
                             </form>
                         {% endblock %}
 

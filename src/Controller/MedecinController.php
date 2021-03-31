@@ -9,6 +9,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 
 /**
  * @Route("/medecin")
@@ -29,7 +31,7 @@ class MedecinController extends AbstractController
     }
 
     /**
-     * @Route("/medecinfront", name="medecin_indexfront", methods={"GET"})
+     * @Route("/medecinindew", name="medecin_indexfront", methods={"GET"})
      */
     public function indexFront(MedecinRepository $medecinRepository): Response
     {
@@ -37,6 +39,49 @@ class MedecinController extends AbstractController
             'medecins' => $medecinRepository->findAll(),
         ]);
     }
+    /**
+     * @Route("/{id}/imprimer", name="medecin_imp", methods={"GET"})
+     */
+
+    public function showmed(Medecin $medecin): Response
+    {
+
+        // Configure Dompdf according to your needs
+        $pdfOptions = new Options();
+        $pdfOptions->set('defaultFont', 'Arial');
+
+        // Instantiate Dompdf with our options
+        $dompdf = new Dompdf($pdfOptions);
+
+        // Retrieve the HTML generated in our twig file
+        $html = $this->renderView('medecin/imp.html.twig', [
+            'medecin'=> $medecin
+        ]);
+
+        // Load HTML to Dompdf
+        $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation 'portrait' or 'portrait'
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+        $options = new Options();
+
+        $options->setIsRemoteEnabled(true);
+
+        // Output the generated PDF to Browser (inline view)
+        $dompdf->stream("mypdf.pdf", [
+            "Attachment" => false
+
+
+        ]);
+
+
+    }
+
+
+
 
     /**
      * @Route("/new", name="medecin_new", methods={"GET","POST"})
@@ -70,6 +115,8 @@ class MedecinController extends AbstractController
             'medecin' => $medecin,
         ]);
     }
+
+
 
     /**
      * @Route("/{id}/edit", name="medecin_edit", methods={"GET","POST"})

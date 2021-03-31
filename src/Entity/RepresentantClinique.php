@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\RepresentantCliniqueRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -32,10 +34,32 @@ class RepresentantClinique
      */
     private $cin;
 
+
+
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $mdp;
+    private $password;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $role;
+
+    /**
+     * @ORM\OneToMany(targetEntity=User::class, mappedBy="representantClinique")
+     */
+    private $ic1;
+
+    /**
+     * @ORM\OneToOne(targetEntity=User::class, cascade={"persist", "remove"})
+     */
+    private $id1;
+
+    public function __construct()
+    {
+        $this->ic1 = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -78,14 +102,69 @@ class RepresentantClinique
         return $this;
     }
 
-    public function getMdp(): ?string
+
+    public function getPassword(): ?string
     {
-        return $this->mdp;
+        return $this->password;
     }
 
-    public function setMdp(string $mdp): self
+    public function setPassword(string $password): self
     {
-        $this->mdp = $mdp;
+        $this->password = $password;
+
+        return $this;
+    }
+
+    public function getRole(): ?string
+    {
+        return $this->role;
+    }
+
+    public function setRole(string $role): self
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|user[]
+     */
+    public function getIc1(): Collection
+    {
+        return $this->ic1;
+    }
+
+    public function addIc1(user $ic1): self
+    {
+        if (!$this->ic1->contains($ic1)) {
+            $this->ic1[] = $ic1;
+            $ic1->setRepresentantClinique($this);
+        }
+
+        return $this;
+    }
+
+    public function removeIc1(user $ic1): self
+    {
+        if ($this->ic1->removeElement($ic1)) {
+            // set the owning side to null (unless already changed)
+            if ($ic1->getRepresentantClinique() === $this) {
+                $ic1->setRepresentantClinique(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getId1(): ?user
+    {
+        return $this->id1;
+    }
+
+    public function setId1(?user $id1): self
+    {
+        $this->id1 = $id1;
 
         return $this;
     }

@@ -32,10 +32,22 @@ class RepresentantPara
      */
     private $cin;
 
+
+
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $mdp;
+    private $password;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $role;
+
+    /**
+     * @ORM\OneToOne(targetEntity=User::class, cascade={"persist", "remove"})
+     */
+    private $id1;
 
     public function getId(): ?int
     {
@@ -78,14 +90,40 @@ class RepresentantPara
         return $this;
     }
 
-    public function getMdp(): ?string
+
+
+    public function getPassword(): ?string
     {
-        return $this->mdp;
+        return $this->password;
     }
 
-    public function setMdp(string $mdp): self
+    public function setPassword(string $password): self
     {
-        $this->mdp = $mdp;
+        $this->password = $password;
+
+        return $this;
+    }
+
+    public function getRole(): ?string
+    {
+        return $this->role;
+    }
+
+    public function setRole(string $role): self
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    public function getId1(): ?user
+    {
+        return $this->id1;
+    }
+
+    public function setId1(?user $id1): self
+    {
+        $this->id1 = $id1;
 
         return $this;
     }

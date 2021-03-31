@@ -20,39 +20,136 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f927a0c0-4272-4c9c-8115-3c373f3525b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/captcha.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210330220120.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210331005216.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210331143612.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210331144519.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210331145145.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210331145543.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210331180450.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210331180833.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/global.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/datepicker/daterangepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/datepicker/daterangepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/datepicker/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7/HELP-US-OUT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/font-awesome-4.7/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/mdi-font/css/material-design-iconic-font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/mdi-font/css/material-design-iconic-font.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/mdi-font/fonts/Material-Design-Iconic-Font.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/mdi-font/fonts/Material-Design-Iconic-Font.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/mdi-font/fonts/Material-Design-Iconic-Font.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/mdi-font/fonts/Material-Design-Iconic-Font.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/mdi-font/fonts/Material-Design-Iconic-Font.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/select2/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/vendor/select2/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/medecin/imp.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/patient/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/symfony.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/composer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/composer/autoload_real.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/composer/autoload_static.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/composer/installed.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/composer/installed.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/composer/platform_check.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/.github/workflows/ci.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/.php_cs.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Cache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Command/DumpEnvCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Command/GenerateIdCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Command/InstallRecipesCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Command/RecipesCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Command/RemoveCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Command/RequireCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Command/UnpackCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Command/UpdateCommand.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/ComposerRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator/AbstractConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator/BundlesConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator/ComposerScriptsConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator/ContainerConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator/CopyFromPackageConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator/CopyFromRecipeConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator/DockerComposeConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator/DockerfileConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator/EnvConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator/GitignoreConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Configurator/MakefileConfigurator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/CurlDownloader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Downloader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Event/UpdateEvent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Flex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/InformationOperation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Lock.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Options.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/PackageFilter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/PackageJsonSynchronizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/PackageResolver.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/ParallelDownloader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Path.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Recipe.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Response.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/ScriptExecutor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/SymfonyBundle.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/TruncatedComposerRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Unpack/Operation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Unpack/Result.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website-skeleton/vendor/symfony/flex/src/Unpacker.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/E-CARE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/E-CARE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MedecinController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MedecinController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PatientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PatientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Medecin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Medecin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Patient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Patient.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/RepresentantClinique.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/RepresentantClinique.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/RepresentantPara.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/RepresentantPara.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/MedecinType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/MedecinType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/PatientType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PatientType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/RepresentantCliniqueType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RepresentantCliniqueType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/RepresentantParaType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RepresentantParaType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/MedecinRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/MedecinRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/AppCustomAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/AppCustomAuthenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base2.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/medecin/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/medecin/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/medecin/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/medecin/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/medecin/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/medecin/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/medecin/indexfront.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/medecin/indexfront.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/medecin/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/medecin/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/patient/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/patient/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/representant_clinique/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_clinique/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/representant_clinique/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_clinique/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/representant_clinique/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_clinique/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/representant_clinique/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_clinique/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/representant_para/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_para/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/representant_para/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_para/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/representant_para/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_para/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/representant_para/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/representant_para/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,18 +275,34 @@
       <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
+      <path value="$PROJECT_DIR$/vendor/captcha-com/symfony-captcha-bundle" />
+      <path value="$PROJECT_DIR$/vendor/captcha-com/captcha" />
     </include_path>
   </component>
   <component name="ProjectId" id="1pFlXdV1YdFMZVLTzpv0906nugp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../wamp64/www/club/mydir" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../medahed" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -239,7 +352,23 @@
       <workItem from="1615317230586" duration="15000" />
       <workItem from="1615317439099" duration="11159000" />
       <workItem from="1615367858136" duration="10114000" />
-      <workItem from="1615386783857" duration="18086000" />
+      <workItem from="1615386783857" duration="21691000" />
+      <workItem from="1616580872080" duration="3508000" />
+      <workItem from="1616678211191" duration="583000" />
+      <workItem from="1616682892875" duration="6323000" />
+      <workItem from="1616840710194" duration="1593000" />
+      <workItem from="1616844600563" duration="45000" />
+      <workItem from="1616844741959" duration="1071000" />
+      <workItem from="1616846149040" duration="472000" />
+      <workItem from="1616846734092" duration="9124000" />
+      <workItem from="1617027364459" duration="595000" />
+      <workItem from="1617110538146" duration="7997000" />
+      <workItem from="1617125298524" duration="676000" />
+      <workItem from="1617135489832" duration="343000" />
+      <workItem from="1617136240256" duration="16453000" />
+      <workItem from="1617208278481" duration="75000" />
+      <workItem from="1617208592547" duration="1145000" />
+      <workItem from="1617210258743" duration="15719000" />
     </task>
     <servers />
   </component>
@@ -258,36 +387,39 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="513" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615240026682">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="513" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1615240026682" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1615409092684">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1616685103062">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1615409092684" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1614810984382">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1616685103062" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1617209879126">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614810984382" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1617209879126" />
     <state x="525" y="135" key="NewPhpClassDialog" timestamp="1615210670650">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="525" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1615210670650" />
-    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1615387341797">
+    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1617227074303">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1615387341797" />
+    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1617227074303" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614794010735" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1615238269891">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1615238269891" />
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1614802026214">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1617209788690">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1614802026214" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1617209788690" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1615240116296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

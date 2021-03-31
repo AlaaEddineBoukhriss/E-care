@@ -21,7 +21,7 @@ class MedecinType extends AbstractType
             ->add('prenom' , TextType::class)
             ->add('Num_tel' , IntegerType::class)
             ->add('Cin' , IntegerType::class)
-            ->add('Mdp', PasswordType::class)
+            ->add('password', PasswordType::class)
             ->add('specialite', TextType::class)
             ->add('adresse' , TextType::class)
             ->add('sexe', TextType::class)

@@ -15,10 +15,7 @@
 
             <table class="table" border="1">
                 <tbody>
-                <tr>
-                    <th>Id</th>
-                    <td>{{ medecin.id }}</td>
-                </tr>
+
                 <tr>
                     <th>Nom</th>
                     <td>{{ medecin.nom }}</td>
@@ -43,13 +40,9 @@
                     <th>Num_tel</th>
                     <td>{{ medecin.NumTel }}</td>
                 </tr>
+
                 <tr>
-                    <th>Cin</th>
-                    <td>{{ medecin.cin }}</td>
-                </tr>
-                <tr>
-                    <th>MDP</th>
-                    <td>{{ medecin.mdp }}</td>
+                    <a href="{{ path('medecin_imp' , {'id' : medecin.id}) }}">Imprimer</a>
                 </tr>
 
                 </tbody>

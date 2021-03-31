@@ -42,10 +42,7 @@ class Patient
      */
     private $num_tel;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $mdp;
+
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -61,6 +58,21 @@ class Patient
      * @ORM\Column(type="string", length=255)
      */
     private $maladie_chro;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $password;
+
+    /**
+     * @ORM\Column(type="string", length=255, options={"default" : "pat" })
+     */
+    private $role;
+
+    /**
+     * @ORM\OneToOne(targetEntity=User::class, cascade={"persist", "remove"})
+     */
+    private $id1;
 
     public function getId(): ?int
     {
@@ -127,17 +139,7 @@ class Patient
         return $this;
     }
 
-    public function getMdp(): ?string
-    {
-        return $this->mdp;
-    }
 
-    public function setMdp(string $mdp): self
-    {
-        $this->mdp = $mdp;
-
-        return $this;
-    }
 
     public function getTaille(): ?string
     {
@@ -171,6 +173,42 @@ class Patient
     public function setMaladieChro(string $maladie_chro): self
     {
         $this->maladie_chro = $maladie_chro;
+
+        return $this;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    public function getRole(): ?string
+    {
+        return $this->role;
+    }
+
+    public function setRole(string $role): self
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+
+    public function getId1(): ?user
+    {
+        return $this->id1;
+    }
+
+    public function setId1(?user $id1): self
+    {
+        $this->id1 = $id1;
 
         return $this;
     }

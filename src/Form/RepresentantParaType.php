@@ -18,7 +18,7 @@ class RepresentantParaType extends AbstractType
             ->add('nom' , TextType::class)
             ->add('prenom' , TextType::class)
             ->add('cin' , IntegerType::class)
-            ->add('mdp', PasswordType::class)
+            ->add('password', PasswordType::class)
 
         ;
     }
