@@ -42,6 +42,9 @@ class Commentaire
      */
     private $medecin;
 
+    //...//
+    private $captchaCode;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +107,18 @@ class Commentaire
     public function setMedecin(string $medecin): self
     {
         $this->medecin = $medecin;
+
+        return $this;
+    }
+
+    public function getCaptchaCode()
+    {
+        return $this->captchaCode;
+    }
+
+    public function setCaptchaCode( $captchaCode)
+    {
+        $this->captchaCode = $captchaCode;
 
         return $this;
     }

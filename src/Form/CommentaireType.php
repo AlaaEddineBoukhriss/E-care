@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Form;
-
+use Captcha\Bundle\CaptchaBundle\Form\Type\CaptchaType;
+use Captcha\Bundle\CaptchaBundle\Validator\Constraints\ValidCaptcha;
 use App\Entity\Commentaire;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,7 +19,18 @@ class CommentaireType extends AbstractType
             ->add('medecin')
             ->add('rep')
 
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptchaUserRegistration',
+                'constraints' => [
+                    new ValidCaptcha([
+                        'message' => 'Invalid captcha, please try again',
+                    ]),
+                ],
+            ))
+
+            // ... ///
         ;
+
     }
 
     public function configureOptions(OptionsResolver $resolver)

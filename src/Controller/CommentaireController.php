@@ -4,11 +4,13 @@ namespace App\Controller;
 
 use App\Entity\Commentaire;
 use App\Form\CommentaireType;
-use App\Form\SearchCommentaireType;
 use App\Repository\CommentaireRepository;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 /**
@@ -19,11 +21,20 @@ class CommentaireController extends AbstractController
     /**
      * @Route("/", name="commentaire_index", methods={"GET","POST"})
      */
-    public function index(Request $request,CommentaireRepository $commentaireRepository): Response
+    public function index(Request $request,CommentaireRepository $commentaireRepository, PaginatorInterface $paginator): Response
     {
 
-        return $this->render('commentaire/index.html.twig', [
-            'commentaires' => $commentaireRepository->findAll(),
+
+
+
+        $donnees = $this->getDoctrine()->getRepository(Commentaire::class)->findBy([],['sujet' => 'desc']);
+        $commentaireRepository = $paginator->paginate(
+            $donnees, // Requête contenant les données à paginer (ici nos articles)
+            $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
+            2// Nombre de résultats par page
+        );
+     return $this->render('commentaire/index.html.twig', [
+     'commentaires' => $commentaireRepository,
 
         ]);
     }
@@ -41,6 +52,9 @@ class CommentaireController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($commentaire);
             $entityManager->flush();
+
+            $this->addFlash(
+                'info' ,'Added successfully!');
 
             return $this->redirectToRoute('commentaire_index');
         }
@@ -61,6 +75,42 @@ class CommentaireController extends AbstractController
         ]);
     }
 
+
+    /**
+     * @Route("/showc/{id}", name="commentaire_showc", methods={"GET"})
+     */
+    public function showc(Commentaire $commentaire): Response
+    {
+        // Configure Dompdf according to your needs
+        $pdfOptions = new Options();
+        $pdfOptions->set('defaultFont', 'Arial');
+
+        // Instantiate Dompdf with our options
+        $dompdf = new Dompdf($pdfOptions);
+
+
+
+
+        // Retrieve the HTML generated in our twig file
+        $html = $this->renderView('commentaire/showc.html.twig', [
+            'commentaire' => $commentaire,
+        ]);
+        // Load HTML to Dompdf
+        $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation 'portrait' or 'portrait'
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser (force download)
+        $dompdf->stream("mypdf.pdf", [
+            "Attachment" => True
+        ]);
+    }
+
+
     /**
      * @Route("/{id}/edit", name="commentaire_edit", methods={"GET","POST"})
      */
@@ -71,6 +121,9 @@ class CommentaireController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+
+            $this->addFlash(
+                'info' ,'Updated successfully!');
 
             return $this->redirectToRoute('commentaire_index');
         }
@@ -90,6 +143,9 @@ class CommentaireController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($commentaire);
             $entityManager->flush();
+
+            $this->addFlash(
+                'info' ,'Deleted successfully!');
         }
 
         return $this->redirectToRoute('commentaire_index');
@@ -107,5 +163,7 @@ class CommentaireController extends AbstractController
         $retour = json_encode();
         return new Response($retour);
     }
+
+
 
 }
