@@ -50,6 +50,16 @@ class PaiementType extends AbstractType
                 new NotBlank([
                     'message' => 'Please enter your mail',
                 ]),]])
+            ->add('message' ,TextType::class, ['constraints' => [
+                new NotBlank([
+                    'message' => 'Please enter your name',
+                ]),
+                new Length([
+                    'min' => 5,
+                    'minMessage' => 'Your message should be at least {{5}} carectere',
+                    // max length allowed by Symfony for security reasons
+                    'max' => 8,
+                ]),]])
 
             ->add('captchaCode', CaptchaType::class, array(
                 'captchaConfig' => 'ExampleCaptchaUserRegistration',

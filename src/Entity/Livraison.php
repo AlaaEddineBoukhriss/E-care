@@ -42,6 +42,11 @@ class Livraison
     // ... //
     protected $captchaCode;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $message;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Livraison
     public function setCaptchaCode( $captchaCode)
     {
         $this->captchaCode = $captchaCode;
+
+        return $this;
+    }
+
+    public function getMessage(): ?string
+    {
+        return $this->message;
+    }
+
+    public function setMessage(string $message): self
+    {
+        $this->message = $message;
 
         return $this;
     }
