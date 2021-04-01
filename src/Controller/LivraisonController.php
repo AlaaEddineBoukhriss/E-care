@@ -25,16 +25,16 @@ class LivraisonController extends AbstractController
             $livraison=$form->getData();
             $message = (new \Swift_Message('Nouveau livraison'))
                 // On attribue le destinataire
-                ->setFrom($livraison('mail'))
+                ->setFrom('achrafzrig@gmail.com')
 
                 // On attribue l'expéditeur
-                ->setTo('achrafzrig@gmail.com')
+                ->setTo($livraison->getMail())
 
 
                 // On crée le texte avec la vue
                 ->setBody(
                     $this->renderView(
-                        'emails/contact.html.twig', compact('livraison')
+                        '/livraison/emails/contact.html.twig', compact('livraison')
                     ),
                     'text/html'
                 )
@@ -42,7 +42,7 @@ class LivraisonController extends AbstractController
 
             $mailer->send($message);
             $this->addFlash('message','Le message a bien ete envoye');
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('carte');
 
         }
         return $this->render('livraison/index.html.twig', [
