@@ -20,36 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f927a0c0-4272-4c9c-8115-3c373f3525b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/captcha.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/panier/listp.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/panier/showp.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/E-CARE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/E-CARE.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CarteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CarteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PanierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PanierController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProduitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Panier.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Panier.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Panier1Type.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/Panier2Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Panier2Type.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PanierRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/PanierRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base2.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/carte/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carte/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/carte/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carte/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/carte/indexFront.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/panier/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panier/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/panier/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panier/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/produit/Disponible.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/Disponible.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/produit/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/produit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LivraisonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LivraisonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/livraison/emails/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/livraison/emails/contact.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,6 +210,7 @@
       <workItem from="1617204221464" duration="1986000" />
       <workItem from="1617211480177" duration="260000" />
       <workItem from="1617212612081" duration="15567000" />
+      <workItem from="1617234399328" duration="1117000" />
     </task>
     <servers />
   </component>

@@ -24,11 +24,12 @@ class LivraisonController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $livraison=$form->getData();
             $message = (new \Swift_Message('Nouveau livraison'))
+                // On attribue le destinataire
+                ->setFrom($livraison('mail'))
+
                 // On attribue l'expéditeur
                 ->setTo('achrafzrig@gmail.com')
 
-                // On attribue le destinataire
-                ->setFrom($livraison('email'))
 
                 // On crée le texte avec la vue
                 ->setBody(
