@@ -275,11 +275,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <div class="clearfix"></div>
 </div>
-<!-- //banner -->
-<!-- content -->
 
-            <!-- //banner -->
-            <!-- content -->
 <form method="post">
 
     {% block body1 %}
@@ -395,12 +391,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
             </div>
             <!-- //contact -->
-            <!-- login -->
             <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" >
                 <div class="modal-dialog" role="document">
                     <div class="modal-content modal-info">
+
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
                         </div>
                     <div class="modal-body modal-spa">
                         <div class="login-grids">
@@ -417,10 +413,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </div>
                 </div>
 
-
-
-            <!-- //login -->
-            <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+                <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
             </body>
             </html>
 
@@ -429,19 +422,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     </div>
 </div>
-<!-- //content -->
-<!-- services -->
 
-
-
-<!-- //services -->
-<!-- team -->
-
-<!-- team -->
-<!-- capabilities -->
-
-<!-- //capabilities -->
-<!-- contact -->
 <div class="contact">
     <div class="container">
 
@@ -463,7 +444,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <h2>Information</h2>
             <div class="strip"></div>
             <p class="para">E-care is ____________________________________________s.</p>
-            <p class="copy-right">© 2020 IT-Geek  <a href="http://w3layouts.com/">W3layouts</a></p>
+            <p class="copy-right">© 2020 IT-Geek  </p>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -472,45 +453,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- login -->
 <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" >
     <div class="modal-dialog" role="document">
+
         <div class="modal-content modal-info">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body modal-spa">
+                < class="login-grids">
+                    <div class="login-bottom">
+                        <a href="{{ path('app_register') }}" > Sign up </a>
+
+                    </div>
+
                 <div class="login-grids">
 
                     <div class="login-right">
-                        <h3>Sign in with your account</h3>
-                        <form action="#" method="post">
-                            <div class="sign-in">
-                                <h4>CIN  :</h4>
-                                <input type="text" name="Type here" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
-                            </div>
-                            <div class="sign-in">
-                                <h4>Password :</h4>
-                                <input type="password" name="Password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-                                <a href="#">Forgot password?</a>
-                            </div>
-                            <select name="roles" onclick="'#'">Choisir
-                                <option value="0"> Choisissez-içi  </option>
-                                <option value="med">Medecin</option>
-                                <option value="pat">Patient</option>
-                                <option value="repc">Representant clinique</option>
-                                <option value="repph">Representant Pharmacie </option>
+                        <h3>Sign in</h3>
 
-                            </select>
-
-                            <div class="single-bottom">
-                                <input type="checkbox"  id="brand" value="">
-                                <label for="brand"><span></span>Remember Me.</label>
-                            </div>
-                            <div class="sign-in">
-                                <input type="submit" value="SIGNIN" >
-                            </div>
-                        </form>
                     </div>
-
-                    <p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
                 </div>
             </div>
         </div>
@@ -524,7 +484,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
+            <div class="modal-body modal-spa">
+                <div class="login-grids">
+                    <div class="login-bottom">
+                        <a href="{{ path('app_register') }}" > Sign up </a>
 
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -35,6 +35,9 @@
     "doctrine/dbal": {
         "version": "2.12.1"
     },
+    "doctrine/deprecations": {
+        "version": "v0.5.3"
+    },
     "doctrine/doctrine-bundle": {
         "version": "2.0",
         "recipe": {
@@ -136,7 +139,10 @@
             "branch": "master",
             "version": "1.20",
             "ref": "80acc9223a205cbf5d9828fd616c82a374d281dd"
-        }
+        },
+        "files": [
+            "./config/packages/knpu_oauth2_client.yaml"
+        ]
     },
     "laminas/laminas-code": {
         "version": "4.0.0"
@@ -152,6 +158,9 @@
     },
     "league/oauth2-facebook": {
         "version": "2.0.5"
+    },
+    "league/oauth2-google": {
+        "version": "4.0.0"
     },
     "monolog/monolog": {
         "version": "1.26.0"

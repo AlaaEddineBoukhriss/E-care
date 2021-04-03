@@ -6,6 +6,7 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -36,11 +37,21 @@ class User implements UserInterface
     private $password;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *     min="8",
+     * max="8",
+     * minMessage="CIN doit être composé de 8 chiffres",
+     * maxMessage="CIN doit être composé de 8 chiffres"
+     * )
+     * @ORM\Column(type="string", length=8)
      */
     private $cin;
 
     /**
+     * @Assert\Length (
+     *     min="1",
+     * max="1"
+     *     )
      * @ORM\Column(type="string", length=255)
      */
     private $sexe;
@@ -61,6 +72,12 @@ class User implements UserInterface
     private $adresse;
 
     /**
+     * @Assert\Length(
+     * min="8",
+     * max="8",
+     * minMessage="Num Tel doit être composé de 8 chiffres",
+     * maxMessage="Num tel doit être composé de 8 chiffres"
+     * )
      * @ORM\Column(type="string", length=8)
      */
     private $num_tel;

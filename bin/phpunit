@@ -11,3 +11,4 @@ if (false === getenv('SYMFONY_PHPUNIT_DIR')) {
 }
 
 require dirname(__DIR__).'/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php';
+curl.cainfo="D:\wamp\bin\php\cacert.pem"

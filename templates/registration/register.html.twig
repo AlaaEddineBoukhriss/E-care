@@ -1,59 +1,177 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Register</title>
 
-<!------ Include the above in your HEAD tag ---------->
+<style>
+    /*custom font*/
+    @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    /*basic reset*/
+    * {margin: 0; padding: 0;}
+
+    html {
+        height: 100%;
+        /*Image only BG fallback*/
+
+        /*background = gradient + image pattern combo*/
+        background:
+                linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+    }
+
+    body {
+        font-family: montserrat, arial, verdana;
+    }
+    /*form styles*/
+    #msform {
+        width: 400px;
+        margin: 50px auto;
+        text-align: center;
+        position: relative;
+    }
+    #msform fieldset {
+        background: white;
+        border: 0 none;
+        border-radius: 3px;
+        box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+        padding: 20px 30px;
+        box-sizing: border-box;
+        width: 80%;
+        margin: 0 10%;
+
+        /*stacking fieldsets above each other*/
+        position: relative;
+    }
+    /*Hide all except first fieldset*/
+    #msform fieldset:not(:first-of-type) {
+        display: none;
+    }
+    /*inputs*/
+    #msform input, #msform textarea {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: montserrat;
+        color: #2C3E50;
+        font-size: 13px;
+    }
+
+    #msform .action-button:hover, #msform .action-button:focus {
+        box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+    }
+    /*headings*/
+    .fs-title {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #2C3E50;
+        margin-bottom: 10px;
+    }
+    .fs-subtitle {
+        font-weight: normal;
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+    /*progressbar*/
+    #progressbar {
+        margin-bottom: 30px;
+        overflow: hidden;
+        /*CSS counters to number the steps*/
+        counter-reset: step;
+    }
+    #progressbar li {
+        list-style-type: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 9px;
+        width: 33.33%;
+        float: left;
+        position: relative;
+    }
+    #progressbar li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 20px;
+        line-height: 20px;
+        display: block;
+        font-size: 10px;
+        color: #333;
+        background: white;
+        border-radius: 3px;
+        margin: 0 auto 5px auto;
+    }
+    /*progressbar connectors*/
+    #progressbar li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: -50%;
+        top: 9px;
+        z-index: -1; /*put it behind the numbers*/
+    }
+    #progressbar li:first-child:after {
+        /*connector not needed before the first step*/
+        content: none;
+    }
+    /*marking active/completed steps green*/
+    /*The number of the step and the connector before it = green*/
+    #progressbar li.active:before,  #progressbar li.active:after{
+        background: #27AE60;
+        color: white;
+    }
 
 
-    <div class="card bg-light">
-        <article class="card-body mx-auto" style="max-width: 400px;">
-            <h4 class="card-title mt-3 text-center">Register</h4>
 
 
-            <p class="divider-text">
-            </p>
-            <form>
-                {% block body %}
-                    {% for flashError in app.flashes('verify_email_error') %}
-                        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-                    {% endfor %}
-                    {{ form_start(registrationForm) }}
-                    {{ form_row(registrationForm.login) }}
-                    {{ form_row(registrationForm.plainPassword, {
-                        label: 'Password'
-                    }) }}
-                    {{ form_row(registrationForm.cin) }}
-                    {{ form_row(registrationForm.sexe) }}
-                    {{ form_row(registrationForm.nom) }}
-                    {{ form_row(registrationForm.prenom) }}
-                    {{ form_row(registrationForm.adresse) }}
-                    {{ form_row(registrationForm.numTel) }}
-                    {{ form_row(registrationForm.email) }}
+</style>
 
 
+<h2 align="center"> Inscription </h2>
+<!-- multistep form -->
+<form id="msform">
+    {% block body %}
+        {% for flashError in app.flashes('verify_email_error') %}
+            <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+        {% endfor %}
+        {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.login) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.cin) }}
+        {{ form_row(registrationForm.sexe , {label : ' Sexe : H/F  ' } ) }}
+        {{ form_row(registrationForm.nom) }}
+        {{ form_row(registrationForm.prenom) }}
+        {{ form_row(registrationForm.adresse) }}
+        {{ form_row(registrationForm.numTel) }}
+        {{ form_row(registrationForm.email) }}
 
-                    {{ form_row(registrationForm.agreeTerms) }}
 
-                    {{ form_row(registrationForm.captchaCode) }}
-                    <button type="submit" class="btn">Register</button>
-                    {{ form_end(registrationForm) }}
-                {% endblock %}
-            </form>
-            <span class="bg-light">OR</span>
+        {{ form_row(registrationForm.agreeTerms) }}
 
-            <p>
-                <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
-            </p>
-        </article>
-    </div> <!-- card.// -->
+        {{ form_row(registrationForm.captchaCode) }}
+        <button type="submit" class="btn btn-outline-danger">S'inscrire</button>
+        {{ form_end(registrationForm) }}
+    {% endblock %}
+    <div class="row" align="center">
+        <div class="col-md-3">
+            <a class="btn btn-outline-dark" href="{{ path('connect_google_start') }}" role="button" style="text-transform:none">
+                <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                Continuer avec Google
+            </a>
+        </div>
+    </div>
+    <div class="row" align="center">
+        <div class="col-md-3">
+            <a class="btn btn-outline-dark" href="{{ path('connect_google_start') }}" role="button" style="text-transform:none">
+                <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="facebook sign-in" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" />
+                Continuer avec Facebook
+            </a>
+        </div>
+    </div>
+    <br>
+    <br>
 
-</div>
-<!--container end.//-->
-
-<br><br>
-<article class="bg-secondary mb-3">
-
-    <br><br>
-</article>
+</form>

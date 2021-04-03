@@ -45,7 +45,7 @@ class DefaultController extends AbstractController
             $entityManager->persist($patient);
             $entityManager->flush();
 
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('default');
         }
 
         return $this->render('patient/new.html.twig', [
