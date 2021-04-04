@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\CommentaireRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=CommentaireRepository::class)
@@ -24,18 +25,23 @@ class Commentaire
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     * min="1",
+     * max="40",
+     *      )
      */
     private $sujet;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     * min="1",
+     * max="800",
+     *      )
      */
     private $question;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $rep;
+
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -44,6 +50,14 @@ class Commentaire
 
     //...//
     private $captchaCode;
+
+    /**
+     * @ORM\OneToOne(targetEntity=Reponse::class, mappedBy="commentaire", cascade={"persist", "remove"})
+     */
+    private $reponse;
+
+
+
 
     public function getId(): ?int
     {
@@ -87,17 +101,7 @@ class Commentaire
 
     }
 
-    public function getRep(): ?string
-    {
-        return $this->rep;
-    }
 
-    public function setRep(string $rep): self
-    {
-        $this->rep = $rep;
-
-        return $this;
-    }
 
     public function getMedecin(): ?string
     {
@@ -122,5 +126,28 @@ class Commentaire
 
         return $this;
     }
+
+    public function getReponse(): ?Reponse
+    {
+        return $this->reponse;
+    }
+
+    public function setReponse(?Reponse $reponse): self
+    {
+        // unset the owning side of the relation if necessary
+        if ($reponse === null && $this->reponse !== null) {
+            $this->reponse->setCommentaire(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($reponse !== null && $reponse->getCommentaire() !== $this) {
+            $reponse->setCommentaire($this);
+        }
+
+        $this->reponse = $reponse;
+
+        return $this;
+    }
+
 
 }

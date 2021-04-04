@@ -1,31 +1,35 @@
-        {% block body %}
 
-<table class="table">
-    <tbody>
-    <tr>
 
-    </tr>
-    <tr>
-        <th>Pseudo  :     </th>
-        <td>{{ commentaire.pseudo }}</td>
-    </tr>
-    <tr>
-        <th>Sujet   :    </th>
-        <td>{{ commentaire.sujet }}          </td>
-    </tr>
-    <tr>
-        <th>Votre commentaire :      </th>
-        <td>{{ commentaire.question }}       </td>
-    </tr>
-    <tr>
-        <th>medécin:       </th>
-        <td>{{ commentaire.medecin   }}       </td>
-    </tr>
-    <tr>
-        <th>La reponse :       </th>
-        <td>{{ commentaire.rep   }}       </td>
-    </tr>
+    {% block body %}
 
-    </tbody>
-</table>
-{% endblock %}
+
+
+
+    <table class="table">
+        <tbody>
+        <tr>
+
+        </tr>
+        <tr>
+            <th>Pseudo  :     </th>
+            <td>{{ commentaire.pseudo }}</td>
+        </tr>
+        <tr>
+            <th>Sujet   :    </th>
+            <td>{{ commentaire.sujet }}          </td>
+        </tr>
+        <tr>
+            <th>Votre commentaire :      </th>
+            <td>{{ commentaire.question }}       </td>
+        </tr>
+        <tr>
+            <th>Médecin  :       </th>
+            <td>{{ commentaire.medecin   }}       </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    {% endblock %}
+    2021 © IT-Geek
+

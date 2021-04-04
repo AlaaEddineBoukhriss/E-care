@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Commentaire;
+use App\Entity\Reponse;
 use App\Form\CommentaireType;
+use App\Form\ReponseType;
 use App\Repository\CommentaireRepository;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -13,6 +15,7 @@ use Dompdf\Dompdf;
 use Dompdf\Options;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+
 /**
  * @Route("/commentaire")
  */
@@ -32,11 +35,15 @@ class CommentaireController extends AbstractController
             $donnees, // Requête contenant les données à paginer (ici nos articles)
             $request->query->getInt('page', 1), // Numéro de la page en cours, passé dans l'URL, 1 si aucune page
             2// Nombre de résultats par page
+
+
+
         );
      return $this->render('commentaire/index.html.twig', [
      'commentaires' => $commentaireRepository,
 
         ]);
+
     }
 
     /**
@@ -68,47 +75,18 @@ class CommentaireController extends AbstractController
     /**
      * @Route("/{id}", name="commentaire_show", methods={"GET"})
      */
-    public function show(Commentaire $commentaire): Response
+    public function show(Commentaire $commentaire , $id): Response
     {
+
         return $this->render('commentaire/show.html.twig', [
             'commentaire' => $commentaire,
         ]);
     }
 
 
-    /**
-     * @Route("/showc/{id}", name="commentaire_showc", methods={"GET"})
-     */
-    public function showc(Commentaire $commentaire): Response
-    {
-        // Configure Dompdf according to your needs
-        $pdfOptions = new Options();
-        $pdfOptions->set('defaultFont', 'Arial');
-
-        // Instantiate Dompdf with our options
-        $dompdf = new Dompdf($pdfOptions);
 
 
 
-
-        // Retrieve the HTML generated in our twig file
-        $html = $this->renderView('commentaire/showc.html.twig', [
-            'commentaire' => $commentaire,
-        ]);
-        // Load HTML to Dompdf
-        $dompdf->loadHtml($html);
-
-        // (Optional) Setup the paper size and orientation 'portrait' or 'portrait'
-        $dompdf->setPaper('A4', 'portrait');
-
-        // Render the HTML as PDF
-        $dompdf->render();
-
-        // Output the generated PDF to Browser (force download)
-        $dompdf->stream("mypdf.pdf", [
-            "Attachment" => True
-        ]);
-    }
 
 
     /**
@@ -165,5 +143,81 @@ class CommentaireController extends AbstractController
     }
 
 
+
+
+
+    /**
+     * @Route("/reponse/{id}", name="reponse", methods={"GET","POST"})
+     */
+    public function reponse(Request $request ,$id): Response
+    {
+        $rep = new Reponse();
+        $comm = $this->getDoctrine()->getRepository(Reponse::class)->find($id);
+        $rep->setCommentaire($comm);
+        $form = $this->createForm(ReponseType::class, $rep);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $rep->setDateRep(new \DateTime('now'));
+            $entityManager->persist($rep);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('commentaire_index');
+        }
+        return $this->render('reponse/reponse.html.twig', [
+            'reponse'=>$rep,
+            'form' => $form->createView(),
+        ]);
+
+
+
+
+    }
+    /**
+     * @Route("/showreponse/{id}", name="showreponse", methods={"GET","POST"})
+     */
+    public function showreponse(Request $request ,$id): Response {
+        $comm = $this->getDoctrine()->getRepository(Commentaire::class)->find($id);
+        $rep = $comm->getReponse();
+
+        return $this->render('reponse/showreponse.html.twig', [
+            'reponse'=>$rep,
+        ]);
+
+
+    }
+    /**
+     * @Route("/showc/{id}", name="commentaire_showc", methods={"GET"})
+     */
+    public function showc(Commentaire $commentaire)
+    {
+        // Configure Dompdf according to your needs
+        $pdfOptions = new Options();
+        $pdfOptions->set('defaultFont', 'Arial');
+
+        // Instantiate Dompdf with our options
+        $dompdf = new Dompdf($pdfOptions);
+
+
+        // Retrieve the HTML generated in our twig file
+        $html = $this->renderView('commentaire/showc.html.twig',[
+            'commentaire' => $commentaire,
+        ]);
+
+        // Load HTML to Dompdf
+        $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation 'portrait' or 'portrait'
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // Output the generated PDF to Browser (force download)
+        $dompdf->stream("mypdf.pdf", [
+            "Attachment" => false
+        ]);
+    }
 
 }

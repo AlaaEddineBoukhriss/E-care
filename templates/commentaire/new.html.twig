@@ -184,13 +184,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     {% block body %}
 
-        <h1>Posez votre question!</h1>
-
+    <BODY>
+    <P><FONT color="#00a4e4"><b>Posez votre question!</b></FONT>
+        <br />
+        <br />
+    </BODY>
+<center>
 
         {{ include('commentaire/_form.html.twig') }}
 
 
-        <a href="{{ path('commentaire_index') }}">back to list</a>
+
+        <br />
+        <br />
+        <a href="{{ path('commentaire_index') }}"><button class="btn">{{ button_label|default('Back to list ') }}</button></a>
+        <br />
+        <br />
+        </center>
+
     {% endblock %}
 </form>
 </div>
