@@ -2,38 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f927a0c0-4272-4c9c-8115-3c373f3525b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210402131501.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210404144032.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210404150054.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ReponseType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reponse/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reponse/reponse.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/reponse/showreponse.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/E-CARE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/E-CARE.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/popuo-box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/swipebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/ar1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/banner1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/banner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/c1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/c2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/c3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/c4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/clinic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/g1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/g2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/g7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/g8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/img-sp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/mark1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/pic1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/pic2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/pic4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/pic5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/pic6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/social.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/bootstrap-3.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/jquery-2.1.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/jquery.magnific-popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/jquery.swipebox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/move-top.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/numscroller-1.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/responsiveslides.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/wow.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CommentaireController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CommentaireController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Commentaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Commentaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Likes.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Posts.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Users.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CommentaireType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CommentaireType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/LikeRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/LikesRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PostsRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RepRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UsersRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commentaire/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commentaire/_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/commentaire/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commentaire/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commentaire/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commentaire/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commentaire/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commentaire/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commentaire/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commentaire/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commentaire/showc.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commentaire/showc.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commentaire/sujet.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/reponse/showreponse.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reponse/showreponse.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,16 +232,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\E-CARE\E-CARE\templates" />
-      <recent name="C:\wamp64\www\E-CARE\src\Controller" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\E-CARE\E-CARE\public" />
       <recent name="C:\wamp64\www\E-CARE\E-CARE\public\css" />
       <recent name="C:\wamp64\www\E-CARE\E-CARE\public\js" />
       <recent name="C:\wamp64\www\E-CARE\tests" />
       <recent name="C:\wamp64\www\E-CARE\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\E-CARE\E-CARE\templates" />
+      <recent name="C:\wamp64\www\E-CARE\src\Controller" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -252,7 +278,7 @@
       <workItem from="1617463696649" duration="65000" />
       <workItem from="1617540630264" duration="2039000" />
       <workItem from="1617547215095" duration="8994000" />
-      <workItem from="1617571550863" duration="3824000" />
+      <workItem from="1617571550863" duration="7392000" />
     </task>
     <servers />
   </component>
@@ -328,10 +354,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1617219872339" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1617202770022">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1617578625630">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1617202770022" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1617578625630" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
