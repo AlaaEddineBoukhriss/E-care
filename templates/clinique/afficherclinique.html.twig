@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+<form method="post" action="{{ path ('rechercheclinique') }}">
+  <label></label>
+  <input type="text" name="search"><input type="submit" value="Recherche">
+</form><br><br>
+            <td><a class="btn btn-w-m btn-success" href="{{ path('addclinique') }}">Ajouter un Clinique </a></td>
+
+<table border="2" class="table">
+    <tr>
+        <td>Identifiant</td>
+        <td>Nom clinique</td>
+        <td>Adresse</td>
+        <td>numero telephone</td>
+        <td>Description</td>
+        <td>delete</td>
+        <td>update</td>
+</tr>
+
+    {% for x in listclinique %}
+        <tr>
+            <td> {{x.id}}</td>
+            <td> {{ x.nomcl}}</td>
+            <td> {{x.adressecl}}</td>
+            <td> {{x.numerocl}}</td>
+            <td> {{x.desccl}}</td>
+            <td><a  class="btn btn-w-m btn-danger" href="{{ path('deleteC',{'id':x.id}) }}">Supprimer</a></td>
+            <td><a class="btn btn-w-m btn-primary" href="{{ path('updateclinique',{'id':x.id}) }}">Modifier</a></td>
+        </tr>
+
+    {% endfor %}
+</table>
+{% endblock %}

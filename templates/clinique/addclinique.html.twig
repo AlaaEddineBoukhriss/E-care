@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    <div class="section-title">
+        <h2>Ajouter un clinique</h2>
+
+    {{ form_start(formClinique,{'attr':{'novalidate' : 'novalidate'}}) }}
+
+    {{ form_errors(formClinique.nomcl)}}
+        {{ form_label(formClinique.nomcl,"Nom clinique") }}
+        {{ form_widget(formClinique.nomcl,{'attr': {'class': 'form-control'}}) }}
+
+{{ form_errors(formClinique.adressecl)}}
+        {{ form_label(formClinique.adressecl,"Adresse clinique") }}
+        {{ form_widget(formClinique.adressecl,{'attr': {'class': 'form-control'}}) }}
+
+{{ form_errors(formClinique.numerocl)}}
+        {{ form_label(formClinique.numerocl,"Numéro clinique") }}
+        {{ form_widget(formClinique.numerocl,{'attr': {'class': 'form-control'}}) }}
+
+        {{ form_errors(formClinique.desccl)}}
+        {{ form_label(formClinique.desccl,"Description clinique") }}
+        {{ form_widget(formClinique.desccl,{'attr': {'class': 'form-control'}}) }}
+            {{ form_end(formClinique) }}
+        </div>
+{% endblock %}

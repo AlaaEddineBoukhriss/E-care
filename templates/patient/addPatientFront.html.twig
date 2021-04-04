@@ -1,0 +1,27 @@
+{% extends 'front.html.twig' %}
+{% block addPatientfront %}
+    <div class="section-title">
+        <h2>Ajouter un Patient</h2>
+
+    {{ form_start(formPatient1,{'attr':{'novalidate' : 'novalidate'}}) }}
+
+    {{ form_errors(formPatient1.name)}}
+        {{ form_label(formPatient1.name,"Nom Patient") }}
+        {{ form_widget(formPatient1.name,{'attr': {'class': 'form-control'}}) }}
+
+{{ form_errors(formPatient1.email)}}
+        {{ form_label(formPatient1.email,"Adresse Email") }}
+        {{ form_widget(formPatient1.email,{'attr': {'class': 'form-control'}}) }}
+
+{{ form_errors(formPatient1.phone)}}
+        {{ form_label(formPatient1.phone,"Numéro Téléphone") }}
+        {{ form_widget(formPatient1.phone,{'attr': {'class': 'form-control'}}) }}
+
+        {{ form_errors(formPatient1.adresse)}}
+        {{ form_label(formPatient1.adresse,"Adresse Patient") }}
+        {{ form_widget(formPatient1.adresse,{'attr': {'class': 'form-control'}}) }}
+        {{ form_end(formPatient1) }}
+        
+
+        </div>
+{% endblock %}

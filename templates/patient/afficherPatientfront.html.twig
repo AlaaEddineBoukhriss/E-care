@@ -1,0 +1,59 @@
+{% extends 'front.html.twig' %}
+{% block listePatientFront %}
+
+
+  <a class="btn btn-info" href="{{ path('ListPatientPDF') }}">Générer liste Patient </a>
+  <br/><br>
+
+  <table border="2" class="table">
+    <tr>
+      <td>
+        Nom Patient
+      </td>
+      <td>
+        Email Patient
+      </td>
+      <td>
+        Numero téléphone
+      </td>
+      <td>
+        Adresse
+      </td>
+       <td>
+        Clinique
+      </td>
+      
+      <td>
+        Update
+      </td>
+    </tr>
+
+    {% for p in listPatient %}
+      <tr>
+        <td>
+          {{ p.name }}
+        </td>
+        <td>
+          {{ p.email }}
+        </td>
+        <td>
+          {{ p.phone }}
+        </td>
+        <td>
+          {{ p.adresse }}
+        </td>
+         <td>
+          {{ p.clinique.nomcl}}
+        </td>
+      
+        <td>
+          <a class="btn btn-w-m btn-primary" href="{{ path('updatePatientFront',{'id':p.id}) }}">Modifier</a>
+        </td>
+      </tr>
+
+    {% endfor %}
+
+  </table>
+
+
+{% endblock %}
