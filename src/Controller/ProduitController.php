@@ -87,6 +87,7 @@ class ProduitController extends AbstractController
 
     }
 
+
     /**
      * @Route("/{id}", name="produit_show", methods={"GET"})
      */

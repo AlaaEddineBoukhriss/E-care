@@ -25,10 +25,10 @@ class LivraisonController extends AbstractController
             $livraison=$form->getData();
             $message = (new \Swift_Message('Nouveau livraison'))
                 // On attribue le destinataire
-                ->setFrom($livraison->getMail())
+                ->setFrom('achrafzrig@gmail.com')
 
                 // On attribue l'expéditeur
-                ->setTo('achrafzrig@gmail.com')
+                ->setTo($livraison->getMail())
 
 
                 // On crée le texte avec la vue
@@ -44,6 +44,7 @@ class LivraisonController extends AbstractController
             $this->addFlash('message','Le message a bien ete envoye');
             $this->addFlash(
                 'info' ,'Commande Confirmer!');
+            return $this->redirectToRoute('carte') ;
 
 
         }

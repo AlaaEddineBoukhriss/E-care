@@ -13,20 +13,32 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:achraf" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f927a0c0-4272-4c9c-8115-3c373f3525b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CarteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CarteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/LivraisonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LivraisonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PanierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PanierController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProduitController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Livraison.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Livraison.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Panier.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Panier.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/PaiementType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PaiementType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/Panier2Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/Panier2Type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carte/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carte/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/carte/indexBack.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/carte/indexBack.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/livraison/emails/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/livraison/emails/contact.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/livraison/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/livraison/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/panier/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panier/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/panier/listp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panier/listp.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/panier/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panier/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/panier/showp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panier/showp.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,17 +190,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\E-CARE\lib\RecaptchaBundle\Resources" />
+      <recent name="C:\wamp64\www\E-CARE\src" />
+      <recent name="C:\wamp64\www\E-CARE\src\Controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\E-CARE\public\js" />
       <recent name="C:\wamp64\www\E-CARE\public" />
       <recent name="C:\wamp64\www\E-CARE\public\css" />
       <recent name="C:\wamp64\www\E-CARE\public\images" />
       <recent name="C:\wamp64\www\E-CARE\tests" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\E-CARE\lib\RecaptchaBundle\Resources" />
-      <recent name="C:\wamp64\www\E-CARE\src" />
-      <recent name="C:\wamp64\www\E-CARE\src\Controller" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -217,6 +229,9 @@
       <workItem from="1617234399328" duration="2652000" />
       <workItem from="1617294394986" duration="9000" />
       <workItem from="1617294905350" duration="585000" />
+      <workItem from="1617383932512" duration="17406000" />
+      <workItem from="1617548125089" duration="5029000" />
+      <workItem from="1617570605515" duration="2993000" />
     </task>
     <servers />
   </component>
@@ -272,5 +287,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="143" y="230" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615148653449" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/base2.html.twig</url>
+          <line>226</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

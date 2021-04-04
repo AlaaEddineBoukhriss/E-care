@@ -8,11 +8,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Infirmary a Medical Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <title>E-CARE a Medical Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Infirmary Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+    <meta name="keywords" content="E-CARE Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
         function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -119,6 +119,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
 </div>
 <!-- //header -->
+{% for message in app.flashes('info')  %}
+<div class="alert-success" role="alert">
+    {{ message }}
+    {% endfor%}
 <div class="header-bottom ">
     <div class="container">
         <nav class="navbar navbar-default">
@@ -132,21 +136,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </button>
                 <div class="logo grid">
                     <div class="grid__item color-3">
-                        <h1><a class="link link--nukun" href="index.html"><i></i>INFI<span>R</span>MARY</a></h1>
+                        <h1><a class="link link--nukun" href="index.html"><i></i>E-CA<span>R</span>E</a></h1>
                     </div>
                 </div>
             </div>
+
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                 <nav class="menu menu--horatio">
                     <ul class="nav navbar-nav menu__list">
-                        <li class="menu__item menu__item--current"><a href="index.html" class="menu__link">Home</a></li>
-                        <li class="menu__item"><a href="about.html" class="menu__link">About</a></li>
-                        <li class="menu__item"><a href="codes.html" class="menu__link">Short Codes</a></li>
-                        <li class="menu__item"><a href="gallery.html" class="menu__link">Gallery</a></li>
-                        <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a>
+
+                        <li class="menu__item menu__item--current"><a href="/home" class="menu__link">Home </a></li>
+                        <li class="menu__item"><a href="medecinfront" class="menu__link">List Medecin </a></li>
                         <li class="menu__item"><a href="/produit" class="menu__link" >Produit</a></li>
+                        <li class="menu__item "><a href="carte" class="menu__link">Panier</a></li>
+
                     </ul>
                 </nav>
             </div>
@@ -251,7 +256,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="col-md-4 content_left wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.2s">
             <div class="welcome">
-                <h3>Welcome To Infirmary</h3>
+                <h3>Welcome To E-CARE</h3>
                 <ul>
                     <li><a href="#">Accusantium Doloremque Accus</a></li>
                     <li><a href="#">Molestiae Consequatur Molestiae</a></li>
@@ -491,7 +496,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 ducimus qui blanditiis praesentium voluptatum deleniti at
                 que corrupti quos dolores et quas molestias excepturi sint
                 occaecati cupiditate non provident, similique sunt.</p>
-            <p class="copy-right">© 2016 Infirmary. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+            <p class="copy-right">© 2021 E-CARE. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
         </div>
         <div class="clearfix"></div>
     </div>

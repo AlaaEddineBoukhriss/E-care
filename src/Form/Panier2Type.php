@@ -19,6 +19,7 @@ class Panier2Type extends AbstractType
     {
         $builder
             ->add('CodePanier' , TextType::class)
+            ->add('Produits' ,TextType::class)
             ->add('Quantite' ,\Symfony\Component\Form\Extension\Core\Type\IntegerType::class)
             ->add('Prix_Tot' ,MoneyType::class)
 

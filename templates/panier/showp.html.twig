@@ -1,7 +1,4 @@
 
-
-
-
 {% block body %}
     <h1>Panier</h1>
 
@@ -12,8 +9,12 @@
             <td>{{ panier.id }}</td>
         </tr>
         <tr>
-            <th>Produit</th>
+            <th>Code Panier</th>
             <td>{{ panier.CodePanier }}</td>
+        </tr>
+        <tr>
+            <th>Les Produits</th>
+            <td>{{ panier.Produits }}</td>
         </tr>
         <tr>
             <th>Quantite</th>

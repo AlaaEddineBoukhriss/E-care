@@ -44,6 +44,11 @@ class Panier
      */
     private $Ref;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Produits;
+
     public function __construct()
     {
         $this->Ref = new ArrayCollection();
@@ -122,6 +127,18 @@ class Panier
     public function removeRef(Produit $ref): self
     {
         $this->Ref->removeElement($ref);
+
+        return $this;
+    }
+
+    public function getProduits(): ?string
+    {
+        return $this->Produits;
+    }
+
+    public function setProduits(string $Produits): self
+    {
+        $this->Produits = $Produits;
 
         return $this;
     }

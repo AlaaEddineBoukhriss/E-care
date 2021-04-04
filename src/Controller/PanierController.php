@@ -142,7 +142,9 @@ class PanierController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($panier);
             $entityManager->flush();
-
+            $this->addFlash('message','Le message a bien ete envoye');
+            $this->addFlash(
+                'info' ,' produit ajoute !');
             return $this->redirectToRoute('panier_index');
         }
 
@@ -175,6 +177,9 @@ class PanierController extends AbstractController
 
             return $this->redirectToRoute('panier_index');
         }
+        $this->addFlash('message','Le message a bien ete envoye');
+        $this->addFlash(
+            'info' ,' produit modifiè !');
 
         return $this->render('panier/edit.html.twig', [
             'panier' => $panier,
@@ -191,8 +196,11 @@ class PanierController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($panier);
             $entityManager->flush();
-        }
+            $this->addFlash('message','Le message a bien ete envoye');
+            $this->addFlash(
+                'info' ,' produit supprimè !');
+
 
         return $this->redirectToRoute('panier_index');
-    }
+    }}
 }

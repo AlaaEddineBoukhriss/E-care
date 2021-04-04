@@ -141,13 +141,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                 <nav class="menu menu--horatio">
                     <ul class="nav navbar-nav menu__list">
-                        <li class="menu__item"><a href="medecinfront" class="menu__link">Home </a></li>
+                        <li class="menu__item"><a href="/home" class="menu__link">Home </a></li>
                         <li class="menu__item"><a href="medecinfront" class="menu__link">List Medecin </a></li>
+                        <li class="menu__item"><a href="/produit" class="menu__link" >Produit</a></li>
                         <li class="menu__item menu__item--current"><a href="carte" class="menu__link">Panier</a></li>
 
                         <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
+
                     </ul>
                 </nav>
             </div>
@@ -203,7 +203,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
                     </div>
-
+                    {% for message in app.flashes('info')  %}
+                    <div class="alert-success" role="alert">
+                        {{ message }}
+                        {% endfor%}
                     {% if items | length >0 %}
                         <script src="{{ asset('js/jquery.min.js') }}"></script>
 
@@ -223,10 +226,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <tr>
                                     <td>{{ item.produit.nom }}</td>
                                     <td>{{ item.produit.prix }}</td>
-                                    <td>{{item.produit.Quantite}}</td>
+                                    <td>{{item.produit.Quantite}}   <a href="{{ path('produit_editQ',{'id':item.produit.id}) }}" >update </td>
                                     <td>{{ item.produit.prix * item.produit.Quantite}}</td>
                                     <td>
                                         <a href="{{ path('cart_remove',{'id':item.produit.id}) }}" class="btn btn-danger btn-sm">Delete
+
                                             <i class="fas fa-trash"></i>
                                         </a>
                                     </td>

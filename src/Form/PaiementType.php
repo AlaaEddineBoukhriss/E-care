@@ -4,7 +4,7 @@ namespace App\Form;
 
 use App\Entity\Livraison;
 
-use Grafikart\RecaptchaBundle\Type\RecaptchaSubmitType;
+
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
@@ -28,7 +28,7 @@ class PaiementType extends AbstractType
                     'min' => 3,
                     'minMessage' => 'Your name should be at least {{3}} carectere',
                     // max length allowed by Symfony for security reasons
-                    'max' => 8,
+                    'max' => 20,
                 ]),]])
             ->add('adresse',TextType::class, ['constraints' => [
         new NotBlank([
@@ -50,16 +50,7 @@ class PaiementType extends AbstractType
                 new NotBlank([
                     'message' => 'Please enter your mail',
                 ]),]])
-            ->add('message' ,TextType::class, ['constraints' => [
-                new NotBlank([
-                    'message' => 'Please enter your name',
-                ]),
-                new Length([
-                    'min' => 5,
-                    'minMessage' => 'Your message should be at least {{5}} carectere',
-                    // max length allowed by Symfony for security reasons
-                    'max' => 8,
-                ]),]])
+            ->add('message' ,TextType::class)
 
             ->add('captchaCode', CaptchaType::class, array(
                 'captchaConfig' => 'ExampleCaptchaUserRegistration',

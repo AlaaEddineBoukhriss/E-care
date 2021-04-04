@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Produit;
 use App\Form\ProduitType;
 use App\Form\SearchProduit1Type;
+use App\Form\QuantityType;
 use App\Form\SearchProduitType;
 use App\Repository\ProduitRepository;
 use Psr\Container\ContainerInterface;
@@ -91,9 +92,17 @@ class CarteController extends AbstractController
             unset($panier[$id]);
         }
         $session->set('panier',$panier);
+
+        $this->addFlash('message','Le message a bien ete envoye');
+        $this->addFlash(
+            'info' ,' product deleted !');
+
         return $this->redirectToRoute("carte");
 
     }
+
+
+
     /**
      * @Route("/Panier/remove{id}" ,name="cart_remove1")
      */
@@ -128,5 +137,26 @@ class CarteController extends AbstractController
             'form' => $form->createView(),
         ]);
 
+    }
+    /**
+     * @Route("/{id}/editQ", name="produit_editQ", methods={"GET","POST"})
+     */
+    public function editQ(Request $request, Produit $produit): Response
+    {
+        $form = $this->createForm(QuantityType::class, $produit);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+            $this->addFlash('message','Le message a bien ete envoye');
+            $this->addFlash(
+                'info' ,' quantite modifie !');
+            return $this->redirectToRoute('carte');
+        }
+
+        return $this->render('produit/edit.html.twig', [
+            'produit' => $produit,
+            'form' => $form->createView(),
+        ]);
     }
 }
