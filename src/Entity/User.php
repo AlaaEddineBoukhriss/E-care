@@ -6,7 +6,6 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -37,21 +36,11 @@ class User implements UserInterface
     private $password;
 
     /**
-     * @Assert\Length(
-     *     min="8",
-     * max="8",
-     * minMessage="CIN doit être composé de 8 chiffres",
-     * maxMessage="CIN doit être composé de 8 chiffres"
-     * )
-     * @ORM\Column(type="string", length=8)
+     * @ORM\Column(type="string", length=255)
      */
     private $cin;
 
     /**
-     * @Assert\Length (
-     *     min="1",
-     * max="1"
-     *     )
      * @ORM\Column(type="string", length=255)
      */
     private $sexe;
@@ -72,12 +61,6 @@ class User implements UserInterface
     private $adresse;
 
     /**
-     * @Assert\Length(
-     * min="8",
-     * max="8",
-     * minMessage="Num Tel doit être composé de 8 chiffres",
-     * maxMessage="Num tel doit être composé de 8 chiffres"
-     * )
      * @ORM\Column(type="string", length=8)
      */
     private $num_tel;
@@ -92,7 +75,26 @@ class User implements UserInterface
      */
     private $isVerified = false;
 
+    /**
+     * @ORM\OneToOne(targetEntity=Store::class, mappedBy="user" , cascade={"persist", "remove"})
+     */
+    private $store;
+    public function getStore(): ?Store
+    {
+        return $this->store;
+    }
 
+    public function setStore(Store $store): self
+    {
+        // set the owning side of the relation if necessary
+        if ($store->getUser() !== $this) {
+            $store->setUser($this);
+        }
+
+        $this->store = $store;
+
+        return $this;
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -127,7 +129,7 @@ class User implements UserInterface
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        $roles[] = 'ROLE_PAT';
 
         return array_unique($roles);
     }

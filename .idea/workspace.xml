@@ -20,31 +20,233 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f927a0c0-4272-4c9c-8115-3c373f3525b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/knpu_oauth2_client.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20210402233829.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/FacebookController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/GoogleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Security/GoogleAuthenticator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20210404211832.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/popuo-box.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/css/swipebox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/ar1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/banner1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/banner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/c1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/c2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/c3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/c4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/clinic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/g1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/g2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/g7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/g8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/img-sp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/mark1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/pic1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/pic2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/pic4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/pic5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/pic6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/images/social.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/bootstrap-3.1.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/jquery-2.1.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/jquery-ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/jquery.magnific-popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/jquery.swipebox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/move-top.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/numscroller-1.0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/responsiveslides.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/Front/js/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/style1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/brochures/18194870_1906197319662978_4096097195795650419_n-604020b6129d6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/brochures/18194870_1906197319662978_4096097195795650419_n-604020cd100b1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/brochures/18425280_1910280935921283_1987716938303857725_n-6040251dada57.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/brochures/telechargement-6040a30be15f5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/brochures/telechargement-6040a346b6275.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/brochures/telechargement-6040a35047142.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/brochures/telechargement-6040a3698a2d6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/0813d2f7d720c7506c7219818007e4b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/0a62f8e5581966ef8df4ba7a003cc7a7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/0df013fa27759885a0b92e560e3b4c51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/0e44f6eba8aa1556e7ad1dc486a7a2b2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/0eb8f45b07bb70acc657c5da619bedb7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/1672275393702145807ebdc5263a7589.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/17d68c3446611002518a1b5e0021ddf9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/1b64b95b54de59d0d91ed294ae94e031.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/1ec0e653ddb8105276aa7589b9b09b64.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/227f50de9d8754c10174f56f7f2b3146.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/23fc78f24af88b5a221cc8cea85a6a33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/248cb98f6255056d4b923f008a523dcb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/2dd000471ef96159afad30da3d4bc7c4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/3a5543013982011f888d6ad10f68e44b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/3ac32d3047e5d24e20e6a3853ace0156.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/3ee12e653831afde4e27a1b0f7b3d485.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/418eefb0f88dd49f6018037bf99f3c8c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/4227aae56a43a9b392228b9088ff344f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/4310048c98945041d61905f1da448a84.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/4ab2817b0ec57810f468fab71c135ad1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/51f77124e9f677827ae139eeec528f7a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/579907f5e901f4c02b8cdb6f29dc1d64.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/58d513deaf74fe3dc1cd7c1555617736.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/5e052a7cf94aa3ffea9d23e5fd0d7952.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/5e9557b3081047f24bcd8394f244d310.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/666c68a1e6546096fea5b33b72d21bda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/6c4a9a07019f088ccff0451f5c0d6d0a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/6e5f48c28522130f5cf62f5cea69e490.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/7202319f2714bd90069ac79a8e7106ec.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/74b5195a4b7d6fa519167d07c102dffd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/758b6ceb86962ee7c18b98558ca2ec59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/7a735320055b544fa8cc7ee5618bdcf9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/7bc44859bf8f5487123982e00686e42f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/7d5c747238904b5bf7532fb59cae113e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/83ddeab00e9124aeb23dfc802c4b2496.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/8b47d15ba1905979eec8de86e8019085.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/92ef1e1999dc2b77f53474f9e0c9bc17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/94af9505b5d6b66ef31274f654aa80c3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/9d4d2f728e1b3f417c36bb1cbd7705a6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/a5992b7e5773a3f4d3185c508e6e1943.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/a7d5d94c2b7249703f6c95501e46b41a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/a7e9274cff6433c7daf8ee5cb7e82a33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/abfa053008cd2bfd7a4341f1fd4b2d48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/ac326d5c7167e4210428ef06a49df281.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/ada1d281eeee8c60c6aecdf24b7c7bbd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/b4db9926c31623f9e6e911059538a4f8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/b839d491781609a997420a7a9b1514f3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/bb010dc6d06c6851c03075f6ce6d7481.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/bbc8869784ec273312f51fbefdefef32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/c02d59dc8e695609aefdbef20f74c49b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/cbd67d394817c44e3b92cc81f13f6bee.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/cc37870ef6b97d21a26b65b602ff2f53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/ced847fdd8d3ca6d7907a2d13e37b70d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/d9555902c7d0136f1928bdd7d6ba41c3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/da4d9a34f7a9e38fd9708c3bc87bb335.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/e708da6042b2672293d882ceb4a65683.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/ed310a64c9d3696c873800642b856061.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/f0428e314a77aba688dfeac3677214fc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/fac9366124376032bbe0b2e522be6942.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CarteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CommentaireController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Default2Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/LivraisonController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/PanierController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ProductClientController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/StoreController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/storeclientController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Commentaire.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Livraison.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Panier.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Reponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Store.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/AddCarteType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/CommentaireType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/DisponibleType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/PaiementType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/Panier2Type.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/PanierType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ProductType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/QuantityType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ReponseType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/SearchCommentaireType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/SearchPanierType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/SearchProduitType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/StoreType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/CarteRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/CommentaireRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/PaimentRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/PanierRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ProductRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ReponseRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/StoreRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base3.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/carte/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/carte/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/carte/indexBack.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/carte/new.htm.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commentaire/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commentaire/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commentaire/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commentaire/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commentaire/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/commentaire/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contact/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/default2/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/emails/contact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front.html - Copie.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/header.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/sidebar.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/livraison/emails/contact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/livraison/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/livraison/msg.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/panier/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/panier/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/panier/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/panier/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/panier/listp.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/panier/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/panier/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/panier/showp.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/pdf.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/product/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/productClient.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reponse/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reponse/reponse.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/reponse/showreponse.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/store/_delete_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/store/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/store/edit.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/store/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/store/new.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/store/show.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/storeclient.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/E-CARE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/E-CARE.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/phpunit" beforeDir="false" afterPath="$PROJECT_DIR$/bin/phpunit" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/AppCustomAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/AppCustomAuthenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base2.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base2.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/medecin/imp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/medecin/imp.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/medecin/indexfront.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/medecin/indexfront.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,6 +395,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/string" />
       <path value="$PROJECT_DIR$/vendor/knpuniversity/oauth2-client-bundle" />
       <path value="$PROJECT_DIR$/vendor/league/oauth2-google" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1pFlXdV1YdFMZVLTzpv0906nugp" />
@@ -208,7 +414,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../medahed" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -219,16 +425,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\templates" />
+      <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\src\Repository" />
+      <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\src\Form" />
+      <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\src\Entity" />
+      <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\src\Controller" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\templates\default" />
       <recent name="C:\wamp64\www\E-CARE\src\Controller" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\public" />
-      <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\public\js" />
-      <recent name="C:\Users\alaaa\Desktop\pidev\E-CARE\public\css" />
-      <recent name="C:\wamp64\www\E-CARE\tests" />
-      <recent name="C:\wamp64\www\E-CARE\templates" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -275,7 +481,13 @@
       <workItem from="1617208278481" duration="75000" />
       <workItem from="1617208592547" duration="1145000" />
       <workItem from="1617210258743" duration="20785000" />
-      <workItem from="1617369279284" duration="29489000" />
+      <workItem from="1617369279284" duration="30056000" />
+      <workItem from="1617538837441" duration="765000" />
+      <workItem from="1617547306464" duration="5000" />
+      <workItem from="1617547320627" duration="111000" />
+      <workItem from="1617556755062" duration="1618000" />
+      <workItem from="1617558480463" duration="7566000" />
+      <workItem from="1617569993177" duration="4550000" />
     </task>
     <servers />
   </component>
@@ -302,22 +514,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="513" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1617402441421" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1617372103885">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1617570671872">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1617372103885" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1617209879126">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1617570671872" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1617537998842">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1617209879126" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1617537998842" />
     <state x="525" y="135" key="NewPhpClassDialog" timestamp="1615210670650">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="525" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1615210670650" />
-    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1617372703145">
+    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1617559459556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1617372703145" />
+    <state x="74" y="73" width="1389" height="679" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1617559459556" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1614794010735" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1615238269891">
       <screen x="0" y="0" width="1536" height="824" />
@@ -336,9 +548,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/templates/medecin/index.html.twig</url>
-          <line>18</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/templates/reponse/showreponse.html.twig</url>
+          <line>62</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

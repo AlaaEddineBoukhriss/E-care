@@ -108,8 +108,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li class="menu__item menu__item--current"><a href="#" class="menu__link">Home</a></li>
                         <li class="menu__item"><a href="medecinfront" class="menu__link">List Medecin </a></li>
                         <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link"></a></li>
+                        <li class="menu__item"><a href="{{ path('commentaire_index') }}" > Q/R </a></li>
+
+                        <li class="menu__item">
+                            <div class="dropdown">
+                                <a class=" dropdown-toggle"  data-toggle="dropdown">Representant para-pharmacie
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="menu__item"><a href="{{'/storeclient'}}" class="menu__link">Boutiques</a></li>
+                                    <li class="menu__item"><a href="{{'/productClient'}}" class="menu__link">Produits</a></li>
+                                    <li class="menu__item"><a href="{{'/carte'}}" class="menu__link">Panier</a></li>
+                                </ul>
+                            </div></li>
                     </ul>
                 </nav>
             </div>
@@ -563,7 +574,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <li class="menu__item"><a href="medecinfront" class="menu__link">List Medecin </a></li>
                             <li class="menu__item"><a href="#" class="menu__link">#</a></li>
                             <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">#</a></li>
+                            <li class="menu__item"><a href="{{ path('commentaire_index') }}" > Q/R </a></li>
+                            <li class="menu__item"><div class="dropdown">
+                                <a class=" dropdown-toggle menu__link nav navbar-nav menu__list" data-toggle="dropdown"> para-pharmacie
+                                        <span class="caret"> </span> </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="menu__item"><a href="{{'/storeclient'}}" class="menu__link">Boutiques</a></li>
+                                        <li class="menu__item"><a href="{{'/productClient'}}" class="menu__link">Produits</a></li>
+                                        <li class="menu__item"><a href="{{'/carte'}}" class="menu__link">Panier</a></li>
+                                    </ul>
+                                </div></li>
                         </ul>
                     </nav>
                 </div>

@@ -1,0 +1,39 @@
+
+
+
+{% block body %}
+
+              <h1 align="center">Liste des paniers</h1>
+
+                <table id="tableac" class="table table-striped table-advance table-hover">
+
+                    <thead>
+                    <tr>
+
+                        <th scope="col">id </th>
+                        <th scope="col">CodePanier</th>
+                        <th scope="col">Les produits</th>
+                        <th scope="col">Quantite</th>
+                        <th scope="col">Prix</th>
+                        <th> </th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    {% for panier in paniers %}
+                        <tr>
+                            <td>{{ panier.id }}</td>
+                            <td>{{ panier.CodePanier }}</td>
+                            <td>{{ panier.Produits }}</td>
+                            <td>{{ panier.Quantite }}</td>
+                            <td>{{ panier.PrixTot }}</td>
+
+                    {% endfor %}
+
+
+                    {% endblock %}
+
+                </table>
+            </div>
+        </div>
+2021 © IT-Geek

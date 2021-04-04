@@ -40,3 +40,5 @@ security:
         - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/home, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - {path: ^/medecinfront, roles: [ROLE_MED, ROLE_PAT] }
+        - {path: ^/store, roles: [ROLE_PARA, ROLE_PAT] }
+        - {path: ^/commentaire, roles: [ROLE_MED, ROLE_PAT]}

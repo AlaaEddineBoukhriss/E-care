@@ -1,0 +1,13 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}Modifier boutique{% endblock %}
+
+{% block body %}
+    <h1>Modifier boutique</h1>
+
+    {{ include('store/_form.html.twig', {'button_label': 'Modifier'}) }}
+
+  <!--a href="{{ path('store_index') }}">Boutique</a-->
+
+ {#  {{ include('store/_delete_form.html.twig') }} #}
+{% endblock %}

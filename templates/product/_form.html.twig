@@ -1,0 +1,95 @@
+{{ form_start(form) }}
+<br>
+        <div class="row">
+
+ <div class="col-md-6 col-sm-12 col-xs-12 ">
+ 
+  <div class="cadreInformations">
+   <div class="card-header titrecard-header">
+      <h2 class="titleblock" >Informations Produit</h2>
+    </div>
+  
+    
+              <div class="row rowSecteur">
+                <div class="col-md-6 col-xs-12">
+                   <label class="label">Nom </label>
+                   {{ form_row(form.name)}}
+                    </div>
+                    <div class="col-md-6 col-xs-12"></div>
+                     </div>
+                    
+                      
+                              <div class="row rowSecteur">
+                        
+                                <div class="col-md-6 col-xs-12">
+                                    <label class="label">Quantité *</label>
+                                    {{ form_row(form.quantity)}}
+                                  </div>  
+                        
+                                    <div class="col-md-6 col-xs-12">
+                                        <label class="label">Prix *</label>
+                                        {{ form_row(form.price)}}
+                                      </div>  </div>
+                                      <div class="row rowSecteur">
+                        
+                                        <div class="col-md-12 col-xs-12">
+                                            <label class="label">Déscription *</label>
+                                            {{ form_row(form.description)}}
+                                          </div>  </div>
+                                    
+                                  
+                        
+                                            
+
+             
+                </div>
+                     </div>
+                 
+                    <div class="col-md-6 col-sm-12 col-xs-12 ">
+           <div class="cadreInformations">
+                    <div class="card-header titrecard-header">
+              <h2 class="titleblock">Coordonnées Produit</h2>
+            </div>
+            
+            <div class="row rowSecteur">
+                        
+                <div class="col-md-12 col-xs-12">
+                    <label class="label">Image *</label>
+                    {{ form_row(form.image)}}
+                    <img src="{{ asset('uploads/images/' ~ product.image) }}" width="300">
+                  </div>  </div>
+                    
+                  </div>
+        
+                     </div>
+                   
+                  </div>
+
+
+
+                  <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5"> 
+<div class="form-actions btnAddRetourS">
+    <br>
+
+
+
+
+
+
+    {{ form_widget(form) }}
+  
+    <button class="btn btnboutiquesave">{{ button_label|default('Ajouter') }}</button>
+{{ form_end(form) }}
+</div>
+</div>
+<div class="col-md-5"> 
+  <br>
+  <a href="{{ path('product_index', {'store': app.user.store.id}) }}" class="btn btnIndexBoutique">Liste produit</a>
+</div>
+   
+<div class="col-md-1"></div>
+</div>
+
+<br><br>

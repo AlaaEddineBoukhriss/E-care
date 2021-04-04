@@ -1,0 +1,39 @@
+
+
+
+
+{% block body %}
+    <h1>Panier</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ panier.id }}</td>
+            </tr>
+            <tr>
+                <th>Code Panier</th>
+                <td>{{ panier.CodePanier }}</td>
+            </tr>
+            <tr>
+                <th>Les Produits</th>
+                <td>{{ panier.Produits}}</td>
+            </tr>
+            <tr>
+                <th>Quantite</th>
+                <td>{{ panier.Quantite }}</td>
+            </tr>
+            <tr>
+                <th>Prix_Tot</th>
+                <td>{{ panier.PrixTot }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('panier_index') }}">back to list</a>
+
+    <a href="{{ path('panier_edit', {'id': panier.id}) }}">edit</a>
+    <a href="{{ path('panier_showp',{ 'id': panier.id})}}">Imprimer</a>
+
+    {{ include('panier/_delete_form.html.twig') }}
+{% endblock %}

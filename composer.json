@@ -13,6 +13,7 @@
         "doctrine/orm": "^2.8",
         "dompdf/dompdf": "^1.0",
         "easycorp/easyadmin-bundle": "^3.2",
+        "knplabs/knp-paginator-bundle": "^5.4",
         "knpuniversity/oauth2-client-bundle": "^2.8",
         "league/oauth2-client": "^2.6",
         "league/oauth2-facebook": "^2.0",
