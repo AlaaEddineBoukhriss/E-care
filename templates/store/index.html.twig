@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Store index{% endblock %}
+
+{% block body %}
+    <h1>Liste boutique</h1>
+    
+    <table class="table">
+        <thead>
+            <tr>
+               
+                <th>Nom</th>
+                <th>Téléphone</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody id="body">
+        {% for store in stores %}
+            <tr>
+             
+                <td>{{ store.name }}</td>
+                <td>{{ store.phone }}</td>
+                <td>{{ store.email }}</td>
+                <td>
+                    <a href="{{ path('store_show', {'id': store.id}) }}" class="btn show"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                    <a href="{{ path('store_edit', {'id': store.id}) }}" class="btn edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">Aucun Boutique trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <br><br><br>
+<div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-4">
+    {% if not app.user.store %}
+    <a href="{{ path('store_new') }}" class="lienStor">Ajouter boutique</a>
+    {% else %}
+        <a href="{{ path('store_show',{'id':app.user.store.id}) }}" class=""></a>
+    {% endif %}
+</div>
+<div class="col-md-3"></div>
+</div>
+<br><br>
+  
+{% endblock %}
+{% block script %}
+    <script>
+        $(document).ready(function(){
+            $("#searchAjax").change(function(){
+                $.ajax({
+                    type: "GET",
+                    url: "/store/search/" + $("#searchAjax").val(),
+                    dataType: "text",
+                    success: function (data) {
+                        $("#body").html(data);
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

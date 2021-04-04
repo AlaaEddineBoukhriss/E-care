@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Boutique{% endblock %}
+
+{% block body %}
+    <h1>Boutique</h1>
+<br><br>
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="cadreInformationsPara">
+       <div class="row rowSecteur">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+           <br>
+           <br>
+           <p class="lab"> <span class="gras"> <i class="fa fa-address-card" aria-hidden="true"></i> Nom :</span> {{ store.name }}</p>
+           <p class="lab">  <span class="gras"><i class="fa fa-phone" aria-hidden="true"></i> Télephone :</span>  {{ store.phone }}</p>
+            <p class="lab"> <span class="gras"><i class="fa fa-envelope" aria-hidden="true"></i> E-mail : </span> {{ store.email }}</p>
+          </div>
+          
+          <div class="col-md-1"></div>
+          </div>
+        </div></div>
+        <br/>
+        </div>
+
+<br><br><br>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-5"> 
+
+    <a href="{{ path('store_index') }}" class="listboutshow">Liste boutique</a>
+
+</div>
+<div class="col-md-5"> 
+   
+    <a href="{{ path('product_index', {'store': store.id}) }}" class="listprod">Liste produits</a>
+</div>
+<div class="col-md-1"></div>
+</div>
+    <br>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+<img src="{{ asset('plugins/images/para.png') }}" id="imgpara">
+<br><br><br><br><br><br>
+<div class="row">
+
+    <div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="cadreInformationsPara">
+   <div class="row rowSecteur">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+       <br>
+       <br>
+       <p class="lab">  <span class="gras"><i class="fa fa-phone" aria-hidden="true"></i> Téléphone :</span>  {{ app.user.tel }}</p>
+        
+   
+
+        <p class="lab"> <span class="gras"> <i class="fa fa-address-card" aria-hidden="true"></i> Nom :</span> {{ app.user.nom }}</p>
+         
+          <p class="lab"><span class="gras">  <i class="fa fa-address-card" aria-hidden="true"></i> Prénom :</span> {{ app.user.prenom }}</p>
+   
+        <p class="lab"> <span class="gras"><i class="fa fa-envelope" aria-hidden="true"></i> Email : </span> {{ app.user.email }}</p>
+      </div>
+      
+      <div class="col-md-1"></div>
+      </div>
+    </div></div>
+    <br/>
+    </div>
+<br><br><br>
+<div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-4">
+
+        {% if not app.user.store %}
+        <a href="{{ path('store_new') }}" class="lienStor">Ajouter boutique</a>
+        {% else %}
+            <a href="{{ path('store_show',{'id':app.user.store.id}) }}" class="lienStor">Mon boutique</a>
+        {% endif %}
+
+
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<br><br>
+
+ 
+{% endblock %}
