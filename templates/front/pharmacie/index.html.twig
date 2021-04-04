@@ -1,0 +1,35 @@
+{% extends 'front/layouts/master.html.twig' %}
+{% block body %}
+<!-- banner -->
+<div class="banner page_head">
+
+</div>
+<!-- //banner -->
+<!-- gallery -->
+<div class="gallery">
+	<div class="container">
+		<h3 class="tittle">Gallery</h3>
+				<div class="gallery-grids">
+                    {% for pharmacie in pharmacies %}
+					<div class="col-md-3 baner-top wow fadeInRight animated" data-wow-delay=".5s">
+						<a href="#" class="b-link-stripe b-animate-go  swipebox">
+							<div class="gal-spin-effect vertical ">
+								<img src="{{ asset('front/images/g1.jpg')}}" alt=" " />
+								<div class="gal-text-box">
+									<div class="info-gal-con">
+										<h4>Infirmary</h4>
+										<span class="separator"></span>
+										<p>Sit accusamus, vel blanditiis iure minima ipsa molestias minus laborum velit, nulla nisi hic quasi enim.</p>
+										<span class="separator"></span>
+										
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+                    {% endfor %}
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+	</div>
+{% endblock %}
