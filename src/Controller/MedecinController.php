@@ -31,7 +31,7 @@ class MedecinController extends AbstractController
     }
 
     /**
-     * @Route("/medecinindew", name="medecin_indexfront", methods={"GET"})
+     * @Route("/medecinindex", name="medecin_indexfront", methods={"GET"})
      */
     public function indexFront(MedecinRepository $medecinRepository): Response
     {

@@ -1,0 +1,47 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}
+
+    <table border="2" class="table">
+
+
+         {% for x in datatable %}
+            <tr>
+
+                <td> {{ x.nomcl}}</td>
+                <td> {{x.adressecl}}</td>
+                <td> {{x.numerocl}}</td>
+                <td> {{x.desccl}}</td>
+
+            </tr>
+
+        {% endfor %} 
+        
+    </table>}
+<!-- Insert this where you want the table to appear -->
+<div id="presidents">Loading...</div>
+
+<!-- Insert this at the end of your body element, but before the closing tag -->
+<script src="{{ asset('bundles/datatables/js/datatables.js') }}"></script>
+<script>
+$(function() {
+    $('#presidents').initDataTables({{ datatable_settings(datatable) }},{
+    searching: true,
+    dom:'<"html5buttons"B>lTfgitp',
+    buttons: [
+        'copy',
+        { extend: 'pdf', title: 'domains'},
+        { extend: 'print' }
+    ]
+})
+//.then(function(dt) {
+    // dt contains the initialized instance of DataTables
+    // dt.on('draw', function() {
+    //    alert('Redrawing table');
+  //  }) 
+//});
+});
+</script>
+            <a class="btn btn-success" href="{{ path('addPatientFront') }}"> Choisir un Clinique</a>
+
+{% endblock %}

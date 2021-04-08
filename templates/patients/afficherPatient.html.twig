@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+
+<form method="post" action="{{ path ('recherchepatient') }}">
+  <label></label>
+  <input type="text" name="search"><input type="submit" value="Recherche">
+  </form><br /><br />
+  <a class="btn btn-info" href="{{ path('ListPatientPDF') }}">Générer liste Patient </a>
+
+
+  </a>
+  <br /><br />
+
+  <table border="2" class="table">
+    <tr>
+      <td>
+        Nom Patient
+      </td>
+      <td>
+        Email Patient
+      </td>
+      <td>
+        Numero téléphone
+      </td>
+      <td>
+        Adresse
+      </td>
+       <td>
+        Clinique
+      </td>
+  
+      <td>
+        Modifier
+      </td>
+    </tr>
+
+    {% for p in listPatients %}
+      <tr>
+        <td>
+          {{ p.name }}
+        </td>
+        <td>
+          {{ p.email }}
+        </td>
+        <td>
+          {{ p.phone }}
+        </td>
+        <td>
+          {{ p.adresse }}
+        </td>
+         <td>
+          {{ p.clinique.nomcl}}
+        </td>
+     
+        <td>
+          <a class="btn btn-w-m btn-primary" href="{{ path('updatePatient',{'id':p.id}) }}">Modifier</a>
+        </td>
+      </tr>
+
+    {% endfor %}
+
+  </table>
+
+
+{% endblock %}

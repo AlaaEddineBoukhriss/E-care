@@ -1,0 +1,47 @@
+{% block title %}
+<h1> Liste des Patients </h1>
+
+  
+
+  <table border="2" class="table">
+    <tr>
+      <td>
+        Nom Patient
+      </td>
+      <td>
+        Email Patient
+      </td>
+      <td>
+        Numero téléphone
+      </td>
+      <td>
+        Adresse
+      </td>
+       <td>
+        Clinique
+      </td>
+      
+    </tr>
+
+    {% for p in listPatient %}
+      <tr>
+        <td>
+          {{ p.name }}
+        </td>
+        <td>
+          {{ p.email }}
+        </td>
+        <td>
+          {{ p.phone }}
+        </td>
+        <td>
+          {{ p.adresse }}
+        </td>
+         <td>
+          {{ p.clinique.nomcl}}
+        </td>
+       
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

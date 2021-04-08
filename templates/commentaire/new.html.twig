@@ -73,46 +73,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </ul>
         </div>
         <div class="header_right">
-            <div class="login">
-                <ul>
-                    <li><a href="#" data-toggle="modal" data-target="#myModal4"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Login</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#myModal5"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>#</a></li>
-                    <li>
-                        <div class="search-bar">
-                            <div class="search">
-                                <a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
-                            </div>
-                            <script src="../js/jquery.magnific-popup.js" type="text/javascript"></script>
-                            <div id="small-dialog" class="mfp-hide">
-                                <div class="search-top">
-                                    <div class="login_pop">
-                                        <form action="#" method="post">
-                                            <input type="submit" value="">
-                                            <input type="text" name="Type something..." value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
-                                        </form>
-                                    </div>
-                                </div>
-                                <script>
-                                    $(document).ready(function() {
-                                        $('.popup-with-zoom-anim').magnificPopup({
-                                            type: 'inline',
-                                            fixedContentPos: false,
-                                            fixedBgPos: true,
-                                            overflowY: 'auto',
-                                            closeBtnInside: true,
-                                            preloader: false,
-                                            midClick: true,
-                                            removalDelay: 300,
-                                            mainClass: 'my-mfp-zoom-in'
-                                        });
-
-                                    });
-                                </script>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
             <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
@@ -141,13 +101,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                 <nav class="menu menu--horatio">
                     <ul class="nav navbar-nav menu__list">
-                        <li class="menu__item"><a href="medecinfront" class="menu__link">Home</a></li>
-                        <li class="menu__item"><a href="medecinfront" class="menu__link">List Medecin </a></li>
-                        <li class="menu__item"><a href="medecinfront" class="menu__link">Panier </a></li>
-                        <li class="menu__item menu__item--current"><a href="/commentaire" class="menu__link">Q/R</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
+                        <li class="menu__item menu__item--current"><a href="{{ path('home') }}" class="menu__link">Home</a></li>
+                        <li class="menu__item"><a href="{{ path('medecin_indexfront') }}" class="menu__link"> Medecin </a></li>
+
+
+                        <li class="menu__item"><a href="{{ path('pharmacie_front') }}" > Pharmacies </a></li>
+                        <li class="menu__item"><a href="{{ path('afficherCf') }}" > Cliniques </a></li>
+                        <li class="menu__item"><div class="dropdown">
+                                <a class="menu__item  menu__link  " data-toggle="dropdown"> Parapharmacie
+                                    <span class="caret"> </span> </a>
+                                <ul class="dropdown-menu">
+                                    <li class="menu__item"><a href="{{'/storeclient'}}" class="menu__link">Boutiques</a></li>
+                                    <li class="menu__item"><a href="{{'/productClient'}}" class="menu__link">Produits</a></li>
+                                    <li class="menu__item"><a href="{{'/carte'}}" class="menu__link">Panier</a></li>
+                                </ul>
+                            </div></li>
+                        <li class="menu__item"><a href="{{ path('commentaire_index') }}" > Q/R </a></li>
                     </ul>
                 </nav>
             </div>
@@ -183,6 +152,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <form method="post">
 
     {% block body %}
+        <div style="background:#dde0e3;margin:15px 0;">
+            <div style="padding:10px; color: #0d0d0d;">
+                Veuillez poser votre question médicale ici pour les médecins.
+                <br>
+                Ce service n'est pas une messagerie instantanée.
+                <br>
+                Nous vous invitons à vous connecter régulièrement pour vérifier l'arrivée de nouvelles réponses de la part des praticiens.
+                <br>
+                Ceci n'est pas un service d'urgence. En cas d'urgence vitale il faut appeler le SAMU 190 ou la protection civile 198.
+                <br>
+                Le site propose des conseils médicaux pertinents, veuillez éviter de demander des prescriptions et vous limiter à une demande de conseil d’ordre général.
+            </div>
+
+        </div>
 
     <BODY>
     <P><FONT color="#00a4e4"><b>Posez votre question!</b></FONT>
@@ -352,52 +335,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- contact -->
 
 <!-- login -->
-<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" >
-    <div class="modal-dialog" role="document">
-        <div class="modal-content modal-info">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body modal-spa">
-                <div class="login-grids">
-
-                    <div class="login-right">
-                        <h3>Sign in with your account</h3>
-                        <form action="#" method="post">
-                            <div class="sign-in">
-                                <h4>CIN  :</h4>
-                                <input type="text" name="Type here" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
-                            </div>
-                            <div class="sign-in">
-                                <h4>Password :</h4>
-                                <input type="password" name="Password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-                                <a href="#">Forgot password?</a>
-                            </div>
-                            <select name="roles" onclick="'#'">Choisir
-                                <option value="0"> Choisissez-içi  </option>
-                                <option value="med">Medecin</option>
-                                <option value="pat">Patient</option>
-                                <option value="repc">Representant clinique</option>
-                                <option value="repph">Representant Pharmacie </option>
-
-                            </select>
-
-                            <div class="single-bottom">
-                                <input type="checkbox"  id="brand" value="">
-                                <label for="brand"><span></span>Remember Me.</label>
-                            </div>
-                            <div class="sign-in">
-                                <input type="submit" value="SIGNIN" >
-                            </div>
-                        </form>
-                    </div>
-
-                    <p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- //login -->
 <!-- login -->
 <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" >

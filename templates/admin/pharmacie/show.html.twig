@@ -1,0 +1,64 @@
+{% extends 'admin/layouts/master.html.twig' %}
+
+
+{% block body %}
+    <div class="page-breadcrumb bg-white">
+        <div class="row align-items-center">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">Pharmacie</h4>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                <div class="d-md-flex">
+                    <ol class="breadcrumb ms-auto">
+                        <li><a href="/admin" class="fw-normal">Home</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="white-box">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Id</th>
+                                    <td>{{ pharmacie.id }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Nom</th>
+                                    <td>{{ pharmacie.nom }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Adresse</th>
+                                    <td>{{ pharmacie.adresse }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Telephone</th>
+                                    <td>{{ pharmacie.telephone }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <a href="{{ path('pharmacie_index') }}">back to list</a>
+
+                        <a href="{{ path('pharmacie_edit', {'id': pharmacie.id}) }}">edit</a>
+
+                        {{ include('admin/pharmacie/_delete_form.html.twig') }}
+                </div>    
+            </div>
+        </div>
+        
+    </div>
+{% endblock %}

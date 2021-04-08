@@ -6,8 +6,6 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 
-{% block body1 %}
-{% if app.user.roles==["ROLE_MED"] %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,13 +18,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
         function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- //for-mobile-apps -->
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/jquery-ui.css" />
-    <link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ asset('Front/css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('Front/css/jquery-ui.css') }}" />
+    <link href="{{ asset('Front/css/popuo-box.css') }}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{{ asset('Front/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
     <!-- js -->
-    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="../js/numscroller-1.0.js"></script>
+    <script type="text/javascript" src="{{ asset('Front/js/jquery-2.1.4.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('Front/js/numscroller-1.0.js') }}"></script>
 
     <!-- //js -->
 
@@ -36,8 +34,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href='//fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
 
     <!-- start-smoth-scrolling -->
-    <script type="text/javascript" src="../js/move-top.js"></script>
-    <script type="text/javascript" src="../js/easing.js"></script>
+    <script type="text/javascript" src="{{ asset('Front/js/move-top.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('Front/js/easing.js') }}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $(".scroll").click(function(event){
@@ -49,7 +47,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!-- start-smoth-scrolling -->
 
     <!--start-date-piker-->
-    <script src="../js/jquery-ui.js"></script>
+    <script src="{{ asset('Front/js/jquery-ui.js') }}"></script>
     <script>
         $(function() {
             $( "#datepicker,#datepicker1" ).datepicker();
@@ -86,7 +84,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </button>
                 <div class="logo grid">
                     <div class="grid__item color-3">
-                        <h1><a class="link link--nukun" href="{{ path('default') }}"><i></i>E-<span>C</span>ARE</a></h1>
+                        <h1><a class="link link--nukun" href="{{ path('home') }}"><i></i>E-<span>C</span>ARE</a></h1>
                     </div>
                 </div>
             </div>
@@ -95,14 +93,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                 <nav class="menu menu--horatio">
                     <ul class="nav navbar-nav menu__list">
-                        <li class="menu__item"><a href="{{ path('default') }}" class="menu__link">Home</a></li>
-                        <li class="menu__item"><a href="medecinfront" class="menu__link">List Medecin </a></li>
-                        <li class="menu__item"><a href="medecinfront" class="menu__link">Panier </a></li>
-                        <li class="menu__item menu__item--current"><a href="/commentaire" class="menu__link">Q/R</a></li>
+                        <li class="menu__item menu__item--current"><a href="home" class="menu__link">Home</a></li>
+                        <li class="menu__item"><a href="{{ path('medecin_indexfront') }}" class="menu__link"> Medecin </a></li>
 
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
+
+                        <li class="menu__item"><a href="{{ path('pharmacie_front') }}" > Pharmacies </a></li>
+                        <li class="menu__item"><a href="{{ path('afficherCf') }}" > Cliniques </a></li>
+                        <li class="menu__item"><div class="dropdown">
+                                <a class="menu__item  menu__link  " data-toggle="dropdown"> Parapharmacie
+                                    <span class="caret"> </span> </a>
+                                <ul class="dropdown-menu">
+                                    <li class="menu__item"><a href="{{'/storeclient'}}" class="menu__link">Boutiques</a></li>
+                                    <li class="menu__item"><a href="{{'/productClient'}}" class="menu__link">Produits</a></li>
+                                    <li class="menu__item"><a href="{{'/carte'}}" class="menu__link">Panier</a></li>
+                                </ul>
+                            </div></li>
+                        <li class="menu__item"><a href="{{ path('commentaire_index') }}" > Q/R </a></li>
                     </ul>
                 </nav>
             </div>
@@ -283,52 +289,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- //contact -->
 <!-- login -->
-<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" >
-    <div class="modal-dialog" role="document">
-        <div class="modal-content modal-info">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body modal-spa">
-                <div class="login-grids">
-
-                    <div class="login-right">
-                        <h3>Sign in with your account</h3>
-                        <form action="#" method="post">
-                            <div class="sign-in">
-                                <h4>CIN  :</h4>
-                                <input type="text" name="Type here" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
-                            </div>
-                            <div class="sign-in">
-                                <h4>Password :</h4>
-                                <input type="password" name="Password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-                                <a href="#">Forgot password?</a>
-                            </div>
-                            <select name="roles" onclick="'#'">Choisir
-                                <option value="0"> Choisissez-içi  </option>
-                                <option value="med">Medecin</option>
-                                <option value="pat">Patient</option>
-                                <option value="repc">Representant clinique</option>
-                                <option value="repph">Representant Pharmacie </option>
-
-                            </select>
-
-                            <div class="single-bottom">
-                                <input type="checkbox"  id="brand" value="">
-                                <label for="brand"><span></span>Remember Me.</label>
-                            </div>
-                            <div class="sign-in">
-                                <input type="submit" value="SIGNIN" >
-                            </div>
-                        </form>
-                    </div>
-
-                    <p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- //login -->
 <!-- login -->
 <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" >
@@ -344,349 +304,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //login -->
 <script type="text/javascript" src="../js/bootstrap-3.1.1.min.js"></script>
 </body>
+
+
+
 </html>
-    {% elseif app.user.roles==["ROLE_PAT"]  %}
-
-
-    <html>
-    <head>
-        <title>E-Care</title>
-        <!-- for-mobile-apps -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="keywords" content="Infirmary Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-            function hideURLbar(){ window.scrollTo(0,1); } </script>
-        <!-- //for-mobile-apps -->
-        <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link rel="stylesheet" href="../css/jquery-ui.css" />
-        <link href="../css/popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
-        <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
-        <!-- js -->
-        <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
-        <script type="text/javascript" src="../js/numscroller-1.0.js"></script>
-
-        <!-- //js -->
-
-
-        <!-- fonts -->
-        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-        <link href='//fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
-
-        <!-- start-smoth-scrolling -->
-        <script type="text/javascript" src="../js/move-top.js"></script>
-        <script type="text/javascript" src="../js/easing.js"></script>
-        <script type="text/javascript">
-            jQuery(document).ready(function($) {
-                $(".scroll").click(function(event){
-                    event.preventDefault();
-                    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-                });
-            });
-        </script>
-        <!-- start-smoth-scrolling -->
-
-        <!--start-date-piker-->
-        <script src="../js/jquery-ui.js"></script>
-        <script>
-            $(function() {
-                $( "#datepicker,#datepicker1" ).datepicker();
-            });
-        </script>
-        <!--/End-date-piker-->
-        <script src="../js/responsiveslides.min.js"></script>
-        <!--animate-->
-        <link href="../css/animate.css" rel="stylesheet" type="text/css" media="all">
-        <script src="../js/wow.min.js"></script>
-        <script>
-            new WOW().init();
-        </script>
-        <!--//end-animate-->
-    </head>
-    <body>
-    <!-- header -->
-    <div class="header wow zoomIn">
-
-        <div class="clearfix"></div>
-    </div>
-    </div>
-    <!-- //header -->
-    <div class="header-bottom ">
-        <div class="container">
-            <nav class="navbar navbar-default">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="logo grid">
-                        <div class="grid__item color-3">
-                            <h1><a class="link link--nukun" href="{{ path('default') }}"><i></i>E-<span>C</span>ARE</a></h1>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
-                    <nav class="menu menu--horatio">
-                        <ul class="nav navbar-nav menu__list">
-                            <li class="menu__item"><a href="{{ path('default') }}" class="menu__link">Home</a></li>
-                            <li class="menu__item"><a href="medecinfront" class="menu__link">List Medecin </a></li>
-                            <li class="menu__item"><a href="medecinfront" class="menu__link">Panier </a></li>
-                            <li class="menu__item menu__item--current"><a href="/commentaire" class="menu__link">Q/R</a></li>
-
-                            <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </nav>
-        </div>
-    </div>
-
-    <!-- banner -->
-    <div class="banner">
-
-        <script>
-            // You can also use "$(window).load(function() {"
-            $(function () {
-                // Slideshow 4
-                $("#slider3").responsiveSlides({
-                    auto: true,
-                    pager: true,
-                    nav: false,
-                    speed: 500,
-                    namespace: "callbacks",
-                    before: function () {
-                        $('.events').append("<li>before event fired.</li>");
-                    },
-                    after: function () {
-                        $('.events').append("<li>after event fired.</li>");
-                    }
-                });
-            });
-        </script>
-
-        <div class="clearfix"></div>
-    </div>
-    <div class="container contact-form">
-
-        <form method="post">
-            {% block body %}
-
-            <BODY>
-            <P><FONT color="#00a4e4"><b>Questions médicales</b></FONT>
-
-                <br />
-                <br />
-                <br />
-
-
-                <input type="text" id="search" name="search" class="form-control" placeholder="Search">
-
-                {% for message in app.flashes('info')  %}
-            <div class="alert-success">
-                {{ message }}
-            </div>
-            {% endfor %}
-            <br />
-            {#<input type="text" id="search" class="form-control"
-                   placeholder="Search"> #}
-            <script src="{{ asset('js/jquery.min.js') }}"></script>
-            <table id="tableac" class="table table-striped table-advance table-hover">
-
-                <thead>
-                <tr>
-                    <th>Patient </th>
-                    <th>Sujet</th>
-                    <th>Question</th>
-                    <th>Médecin </th>
-
-                </tr>
-                </thead>
-                <tbody>
-
-                {% for comme in commentaires %}
-                    <tr>
-
-                        <td>{{ comme.pseudo }}</td>
-                        <td>{{ comme.sujet }}</td>
-                        <td>{{ comme.question }}</td>
-                        <td>{{ comme.medecin }}</td>
-
-
-
-                        <td>
-                            <a href="{{ path('commentaire_show' , {'id': comme.id} ) }}">Show</a>
-                            <br />
-                            <br />
-
-                            <a href="{{ path('showreponse', {'id': comme.id}) }}">Voir réponse</a>
-                            <br />
-                            <br />
-
-
-
-
-                            <br />
-                            <br />
-                        </td>
-
-                    </tr>
-
-
-                {% else %}
-                    <tr>
-                        <td colspan="6">Aucun sujet</td>
-                    </tr>
-                {% endfor %}
-
-
-                <script>
-                    $(document).ready(function(){
-                        $('#search').keyup(function(){
-                            search_table($(this).val());
-                        });
-                        function search_table(value){
-                            $('#tableac tbody tr').each(function(){
-                                var found = 'false';
-                                $(this).each(function(){
-                                    if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
-                                    {
-                                        found = 'true';
-                                    }
-                                });
-                                if(found == 'true')
-                                {
-                                    $(this).show();
-
-                                }
-                                else
-                                {
-                                    $(this).hide();
-
-                                }
-                            });
-                        }
-                    });
-                </script>
-                </tbody>
-
-            </table>
-
-            <a href="{{ path('commentaire_new') }}">Posez votre question!</a>
-            <br />
-            <br />
-
-            {{ knp_pagination_render(commentaires) }}
 
 
 
 
 
-            {% endblock %}
-        </form>
-    </div>
 
-    <div class="contact">
-        <div class="container">
-
-            <div class="col-md-6 contact-right wow fadeIn animated animated" data-wow-delay="0.1s" data-wow-duration="2s">
-                <h3>Contact Us</h3>
-                <div class="strip"></div>
-                <ul class="con-icons">
-                    <li><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>+123 456 7890</li>
-                    <li><a href="mailto:contact@e-care.tn"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Contact@e-care.tn</a></li>
-                </ul>
-                <ul class="fb_icons">
-                    <li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
-                    <li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>
-                    <li class="hvr-rectangle-out"><a class="goog" href="#"></a></li>
-                    *            </ul>
-
-            </div>
-            <div class="col-md-6 contact-left wow fadeIn animated animated" data-wow-delay="0.1s" data-wow-duration="2s">
-                <h2>Information</h2>
-                <div class="strip"></div>
-                <p class="para">E-care is ____________________________________________s.</p>
-                <p class="copy-right">© 2020 IT-Geek  <a href="http://w3layouts.com/">W3layouts</a></p>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <!-- //contact -->
-    <!-- login -->
-    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" >
-        <div class="modal-dialog" role="document">
-            <div class="modal-content modal-info">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body modal-spa">
-                    <div class="login-grids">
-
-                        <div class="login-right">
-                            <h3>Sign in with your account</h3>
-                            <form action="#" method="post">
-                                <div class="sign-in">
-                                    <h4>CIN  :</h4>
-                                    <input type="text" name="Type here" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
-                                </div>
-                                <div class="sign-in">
-                                    <h4>Password :</h4>
-                                    <input type="password" name="Password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-                                    <a href="#">Forgot password?</a>
-                                </div>
-                                <select name="roles" onclick="'#'">Choisir
-                                    <option value="0"> Choisissez-içi  </option>
-                                    <option value="med">Medecin</option>
-                                    <option value="pat">Patient</option>
-                                    <option value="repc">Representant clinique</option>
-                                    <option value="repph">Representant Pharmacie </option>
-
-                                </select>
-
-                                <div class="single-bottom">
-                                    <input type="checkbox"  id="brand" value="">
-                                    <label for="brand"><span></span>Remember Me.</label>
-                                </div>
-                                <div class="sign-in">
-                                    <input type="submit" value="SIGNIN" >
-                                </div>
-                            </form>
-                        </div>
-
-                        <p>By logging in you agree to our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- //login -->
-    <!-- login -->
-    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" >
-        <div class="modal-dialog" role="document">
-            <div class="modal-content modal-info">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- //login -->
-    <script type="text/javascript" src="../js/bootstrap-3.1.1.min.js"></script>
-    </body>
-    </html>
-
-
-
-
- ---------------------------------------------------------------------------------------
-{% endif %}
-{% endblock %}

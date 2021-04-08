@@ -141,13 +141,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
                 <nav class="menu menu--horatio">
                     <ul class="nav navbar-nav menu__list">
-                        <li class="menu__item"><a href="/home" class="menu__link">Home </a></li>
-                        <li class="menu__item"><a href="medecinfront" class="menu__link">List Medecin </a></li>
-                        <li class="menu__item menu__item--current"><a href="carte" class="menu__link">Panier</a></li>
+                        <li class="menu__item menu__item--current"><a href="{{ path('home') }}" class="menu__link">Home</a></li>
+                        <li class="menu__item"><a href="{{ path('medecin_indexfront') }}" class="menu__link"> Medecin </a></li>
 
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">#</a></li>
+
+                        <li class="menu__item"><a href="{{ path('pharmacie_front') }}" > Pharmacies </a></li>
+                        <li class="menu__item"><a href="{{ path('afficherCf') }}" > Cliniques </a></li>
+                        <li class="menu__item"><div class="dropdown">
+                                <a class="menu__item  menu__link  " data-toggle="dropdown"> Parapharmacie
+                                    <span class="caret"> </span> </a>
+                                <ul class="dropdown-menu">
+                                    <li class="menu__item"><a href="{{'/storeclient'}}" class="menu__link">Boutiques</a></li>
+                                    <li class="menu__item"><a href="{{'/productClient'}}" class="menu__link">Produits</a></li>
+                                    <li class="menu__item"><a href="{{'/carte'}}" class="menu__link">Panier</a></li>
+                                </ul>
+                            </div></li>
+                        <li class="menu__item"><a href="{{ path('commentaire_index') }}" > Q/R </a></li>
                     </ul>
                 </nav>
             </div>

@@ -1,0 +1,106 @@
+{% extends 'front/layouts/master.html.twig' %}
+{% block body %}
+	<script src="{{ asset('js/jquery-3.2.1.min.js') }}" xmlns="http://www.w3.org/1999/html"></script>
+	<script src="{{ asset('styles1/bootstrap4/popper.js') }}"></script>
+	<script src="{{ asset('styles1/bootstrap4/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('styles1/bootstrap4/bootstrap.min.js') }}"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
+	<script src="{{ asset('js/contact_custom.js') }}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
+	<!-- banner -->
+<div class="banner page_head">
+
+
+<!-- //banner -->
+
+<!-- gallery -->
+<div class="gallery">
+	<div class="container">
+		<h3 class="tittle">liste des pharmacies</h3>
+
+		<input type="text" id="search" name="search" class="form-control" placeholder="Search">
+
+		<table id="tableac" class="table table-striped table-advance table-hover">
+			<script src="{{ asset('js/jquery.min.js') }}"></script>
+
+			    <div class="gallery-grids">
+                    {% for pharmacie in pharmacies %}
+					<td>
+					<div class="col-md-3 baner-top wow fadeInRight animated" data-wow-delay=".5s">
+						<a href="https://maps.google.com/?q={{ pharmacie.adresse }}" class="b-link-stripe b-animate-go  swipebox">
+							<div class="gal-spin-effect vertical ">
+								<img src="{{ asset('front1/images/PH1.jpg')}}" alt=" " />
+								<div class="gal-text-box">
+									<div class="info-gal-con">
+
+									</div>
+									<h4>{{ pharmacie.nom }}</h4>
+									<p>{{ pharmacie.adresse }}</p>
+									<p>{{ pharmacie.telephone }}</p>
+								</div>
+								<span class='result'></span>
+								<input type="hidden" name="rating">
+							</div>
+
+
+					</a>
+						<div action="{{ path('AvisAdd') }}" method="post"><a href="{{ path('AvisAdd') }}">Rate</a>
+							<div class="rateyo" id= "rating"
+								 data-rateyo-rating="1"
+								 data-rateyo-num-stars="5"
+								 data-rateyo-score="3">
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</tr>
+			{% endfor %}
+
+
+		</table>
+
+		<script>
+			$(function () {
+				$(".rateyo").rateYo().on("rateyo.change", function (e, data) {
+					var rating = data.rating;
+					$(this).parent().find('.score').text('score :'+ $(this).attr('data-rateyo-score'));
+					$(this).parent().find('.result').text('rating :'+ rating);
+					$(this).parent().find('input[name=rating]').val(rating); //add rating value to input field
+				});
+			});
+			$(document).ready(function(){
+				$('#search').keyup(function(){
+					search_table($(this).val());
+				});
+				function search_table(value){
+					$('#tableac tr').each(function(){
+						var found = 'false';
+						$(this).each(function(){
+							if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+							{
+								found = 'true';
+							}
+						});
+						if(found == 'true')
+						{
+							$(this).show();
+
+						}
+						else
+						{
+							$(this).hide();
+
+						}
+					});
+				}
+			});
+		</script>
+
+	</div>
+</div>
+</div>
+{% endblock %}
+

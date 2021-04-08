@@ -39,6 +39,11 @@ security:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/home, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - {path: ^/medecinfront, roles: [ROLE_MED, ROLE_PAT] }
-        - {path: ^/store, roles: [ROLE_PARA, ROLE_PAT] }
-        - {path: ^/commentaire, roles: [ROLE_MED, ROLE_PAT]}
+        - {path: ^/storeclient, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - {path: ^/store, roles: [ROLE_PARA, ROLE_ADMIN] }
+        - {path: ^/carte, roles: IS_AUTHENTICATED_FULLY}
+        - {path: ^/commentaire/reponse, roles: ROLE_MED}
+        - {path: ^/user, role: ROLE_ADMIN }
+        - {path: ^/cli, role: IS_AUTHENTICATED_FULLY }
+
+
